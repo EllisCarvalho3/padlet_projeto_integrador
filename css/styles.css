@@ -646,66 +646,149 @@ nav a:hover {
     height: 100%;
     object-fit: cover;
 }
-
 /* ==========================================================================
-   6. BIBLIOGRAFIA & LEIS
+   6. BIBLIOGRAFIA & LEIS (ESTÉTICA INTEGRADA E UNIFICADA)
    ========================================================================== */
-.bibliografia {
-    padding: 150px 8%;
+.bibliografia, .laws-page {
+    padding: 120px 8% 80px 8%;
+    text-align: center;
+    background: linear-gradient(180deg, var(--branco), #fdfbff);
 }
 
-.referencia {
-    background: white;
-    padding: 30px;
+.laws-page h1 {
+    font-size: 3rem;
+    color: var(--texto);
+    margin-bottom: 8px;
+}
+
+.laws-subtitle {
+    font-size: 1.1rem;
+    color: var(--texto);
+    opacity: 0.8;
+    margin-bottom: 50px;
+}
+
+/* Container de Alinhamento das Leis */
+.laws-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Estrutura das Linhas (Baseada na Referência Bibliográfica) */
+.law-row {
+    padding: 25px 35px;
     border-radius: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 15px 40px rgba(179, 157, 219, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    text-align: left;
+    box-shadow: 0 12px 35px rgba(179, 157, 219, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
 }
 
+.law-row:hover {
+    transform: translateX(8px);
+    box-shadow: 0 15px 45px rgba(179, 157, 219, 0.2);
+}
+
+/* Círculos Numéricos Identificadores */
+.law-number {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(45, 33, 66, 0.12);
+    color: var(--texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* Blocos de Texto Internos */
+.law-info {
+    flex: 1;
+}
+
+.law-info h2 {
+    font-size: 1.35rem;
+    color: var(--texto);
+    margin-bottom: 6px;
+}
+
+.law-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--texto);
+    opacity: 0.9;
+}
+
+/* Customização dos Fundos Pastéis Baseados na Imagem f16469.png */
+.ldb-row {
+    background-color: var(--verde-pastel);
+    border-color: rgba(200, 230, 201, 0.5);
+}
+
+.decreto-row {
+    background-color: var(--azul-pastel);
+    border-color: rgba(179, 229, 252, 0.5);
+}
+
+.lbi-row {
+    background-color: var(--amarelo-pastel);
+    border-color: rgba(255, 245, 157, 0.5);
+}
+
+/* Botões Customizados Herdados da Bibliografia */
 .btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
+    padding: 12px 24px;
     background: var(--lilas-principal);
     color: white;
     text-decoration: none;
     border-radius: 15px;
-    transition: 0.3s;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
 }
 
 .btn:hover {
-    background: var(--lilas-secundario);
-    transform: translateY(-2px);
+    background: var(--texto);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(45, 33, 66, 0.2);
 }
 
-.laws-page {
-    padding: 150px 8%;
+.btn-law {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.laws-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.law-card {
-    padding: 35px;
-    border-radius: 30px;
-    color: var(--texto); /* Mudado para a cor de texto escura para garantir leitura sobre o fundo pastel */
-    font-weight: 500;
-}
-
-/* Classes especÃ­ficas das leis adaptadas para tons pastÃ©is */
-.ldb {
-    background: var(--verde-pastel);
-}
-
-.decreto {
-    background: var(--azul-pastel);
-}
-
-.lbi {
-    background: var(--amarelo-pastel);
+/* Responsividade de Tela para Celulares */
+@media (max-width: 850px) {
+    .law-row {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .law-number {
+        margin: 0 auto;
+    }
+    
+    .btn-law {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
 }
 
 /* ==========================================================================
