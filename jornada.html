@@ -54,85 +54,206 @@ Clique em uma estação para descobrir mais.
     <p>Clique em qualquer estação do caminho para abrir materiais de aprofundamento, artigos e vídeos explicativos!</p>
 </section>
 
+
 <section class="journey-map">
     <div class="road"></div>
 
-    <!-- ESTAÇÃO 1 -->
-    <div class="station left" onclick="toggleStation(this)">
+    <div class="station left" data-target="modal-estacao-1">
         <div class="badge-indicator">1</div>
         <div class="icon">💡</div>
         <h3>Tutoria de Pares: O Que É?</h3>
-        
-        <div class="station-media-content">
-            <div class="video-container">
-                <!-- Substitua o ID 'VIDEO_ID_AQUI' pelo código de incorporação do Youtube desejado -->
-                <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" allowfullscreen></iframe>
-            </div>
-            <div class="article-text">
-                <strong>Conceituação Científica:</strong> A tutoria de pares é uma estratégia pedagógica onde estudantes interagem para alcançar objetivos de aprendizagem mútuos. Funciona potencializando a Zona de Desenvolvimento Proximal (ZDP) de Vygotsky de forma prática e horizontal.
-            </div>
-        </div>
     </div>
 
-    <!-- ESTAÇÃO 2 -->
-    <div class="station right" onclick="toggleStation(this)">
+    <div class="station right" data-target="modal-estacao-2">
         <div class="badge-indicator">2</div>
         <div class="icon">❌</div>
         <h3>O Que Não É?</h3>
-        
-        <div class="station-media-content">
-            <div class="article-text">
-                <strong>Desmistificando o Processo:</strong> Não se trata de sobrecarregar um aluno com o trabalho do professor, nem de criar uma hierarquia de superioridade intelectual. É uma colaboração mútua onde ambos os lados desenvolvem soft-skills cruciais.
-            </div>
-        </div>
     </div>
 
-    <!-- ESTAÇÃO 3 -->
-    <div class="station left" onclick="toggleStation(this)">
+    <div class="station left" data-target="modal-estacao-3">
         <div class="badge-indicator">4</div>
         <div class="icon">🛠️</div>
         <h3>Ferramentas e Estratégias</h3>
-        
-        <div class="station-media-content">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" allowfullscreen></iframe>
-            </div>
-            <div class="article-text">
-                <strong>Metodologias Ativas:</strong> Roteiros de feedback construtivo, técnicas de checagem cruzada e cronogramas compartilhados são ótimos exemplos de recursos práticos para o tutor gerenciar o ritmo dos encontros.
-            </div>
-        </div>
     </div>
 
-    <!-- ESTAÇÃO 4 -->
-    <div class="station right" onclick="toggleStation(this)">
+    <div class="station right" data-target="modal-estacao-4">
         <div class="badge-indicator">6</div>
         <div class="icon">👥</div>
         <h3>Papéis e Competências</h3>
-        
-        <div class="station-media-content">
-            <div class="article-text">
-                <strong>O Tutor (Mentor) & O Tutorado (Aprendiz):</strong> Enquanto o tutor aprimora sua capacidade de síntese, comunicação assertiva e empatia, o tutorado desenvolve autonomia, perde o medo de errar e encontra um ambiente seguro para tirar dúvidas.
-            </div>
-        </div>
+    </div>
+
+    <div class="station left" data-target="modal-estacao-5">
+        <div class="badge-indicator">7</div>
+        <div class="icon">📊</div>
+        <h3>Avaliação e Resultados</h3>
     </div>
 </section>
 
-<!-- ESTAÇÃO 5 -->
-  <div class="station left" onclick="toggleStation(this)">
-        <div class="badge-indicator">7</div>
-        <div class="icon"></div>
-        <h3>Avaliação e resultados</h3>
-        
-        <div class="station-media-content">
+
+<div id="modal-estacao-1" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <span class="modal-badge">Estação 1</span>
+            <h2>Tutoria de Pares: O Que É?</h2>
+        </div>
+        <div class="modal-body">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ESTACAO_1" allowfullscreen></iframe>
             </div>
             <div class="article-text">
-                <strong>Metodologias Ativas:</strong> Roteiros de feedback construtivo, técnicas de checagem cruzada e cronogramas compartilhados são ótimos exemplos de recursos práticos para o tutor gerenciar o ritmo dos encontros.
+                <strong>Conceituação Científica:</strong> A tutoria de pares é uma estratégia pedagógica baseada em interações horizontais, onde estudantes colaboram ativamente para atingir metas de aprendizado comuns. Ela reconfigura a sala de aula tradicional, descentralizando a figura do transmissor único do saber e valorizando a troca de experiências síncronas entre os próprios alunos.
+            </div>
+            <div class="links-box">
+                <h4>🔗 Materiais Complementares & Links</h4>
+                <ul>
+                    <li>
+                        <a href="https://seu-artigo-aqui.com" target="_blank">
+                            <span>📄</span> Ler Artigo Completo em PDF
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/..." target="_blank">
+                            <span>📂</span> Diretrizes para Download (Google Drive)
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 
+<div id="modal-estacao-2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <span class="modal-badge">Estação 2</span>
+            <h2>O Que Não É?</h2>
+        </div>
+        <div class="modal-body">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ESTACAO_2" allowfullscreen></iframe>
+            </div>
+            <div class="article-text">
+                <strong>Desmistificando o Processo:</strong> Não se trata de sobrecarregar um aluno com as obrigações e responsabilidades do professor, nem de estabelecer uma hierarquia de superioridade intelectual ou rótulos excludentes. É, essencialmente, uma dinâmica de colaboração mútua onde ambos os lados se apoiam e desenvolvem habilidades interpessoais preciosas.
+            </div>
+            <div class="links-box">
+                <h4>🔗 Materiais Complementares & Links</h4>
+                <ul>
+                    <li>
+                        <a href="https://seu-artigo-aqui.com" target="_blank">
+                            <span>📄</span> Mitos e Verdades sobre Aprendizagem Colaborativa
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/..." target="_blank">
+                            <span>📂</span> Infográfico de Alinhamento Pedagógico
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-estacao-3" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <span class="modal-badge">Estação 3</span>
+            <h2>Ferramentas e Estratégias</h2>
+        </div>
+        <div class="modal-body">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ESTACAO_3" allowfullscreen></iframe>
+            </div>
+            <div class="article-text">
+                <strong>Metodologias Ativas:</strong> Roteiros estruturados de feedback construtivo, técnicas de checagem cruzada de tarefas e cronogramas visuais compartilhados são excelentes exemplos de recursos práticos. Eles ajudam o tutor a gerenciar o ritmo dos encontros, mantendo o engajamento elevado de forma leve e lúdica.
+            </div>
+            <div class="links-box">
+                <h4>🔗 Materiais Complementares & Links</h4>
+                <ul>
+                    <li>
+                        <a href="https://seu-artigo-aqui.com" target="_blank">
+                            <span>📄</span> Guia Prático de Roteiros de Feedback
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/..." target="_blank">
+                            <span>📂</span> Baixar Modelos de Cronogramas Pastéis
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-estacao-4" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <span class="modal-badge">Estação 4</span>
+            <h2>Papéis e Competências</h2>
+        </div>
+        <div class="modal-body">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ESTACAO_4" allowfullscreen></iframe>
+            </div>
+            <div class="article-text">
+                <strong>O Tutor (Mentor) & O Tutorado (Aprendiz):</strong> Enquanto o tutor solidifica seus conhecimentos ao praticar a capacidade de síntese, comunicação assertiva e empatia, o estudante tutorado desenvolve segurança, perde o receio do erro e encontra um ambiente acolhedor e livre de julgamentos para consolidar suas dúvidas.
+            </div>
+            <div class="links-box">
+                <h4>🔗 Materiais Complementares & Links</h4>
+                <ul>
+                    <li>
+                        <a href="https://seu-artigo-aqui.com" target="_blank">
+                            <span>📄</span> Matriz de Habilidades Sociais (Soft Skills)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/..." target="_blank">
+                            <span>📂</span> Ficha de Atribuições de Papéis Pedagógicos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-estacao-5" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <span class="modal-badge">Estação 5</span>
+            <h2>Avaliação e Resultados</h2>
+        </div>
+        <div class="modal-body">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ESTACAO_5" allowfullscreen></iframe>
+            </div>
+            <div class="article-text">
+                <strong>Mensuração formativa e evolução:</strong> Avaliar os frutos da tutoria envolve olhar para além das notas tradicionais. Trata-se de coletar dados qualitativos por meio de autoavaliações, registros de evolução comportamental e percepções de melhora na autoconfiança de cada estudante participante, garantindo um acompanhamento holístico do progresso.
+            </div>
+            <div class="links-box">
+                <h4>🔗 Materiais Complementares & Links</h4>
+                <ul>
+                    <li>
+                        <a href="https://seu-artigo-aqui.com" target="_blank">
+                            <span>📄</span> Planilha de Métricas Qualitativas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/..." target="_blank">
+                            <span>📂</span> Formulário de Autoavaliação para Alunos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="js/journey.js"></script>
 

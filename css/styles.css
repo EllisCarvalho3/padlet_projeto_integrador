@@ -339,6 +339,167 @@ nav a:hover {
 }
 
 /* ==========================================================================
+   9. EXTENSÃO MÁGICA: SISTEMA DE MODAIS FLUTUANTES PASTÉIS
+   ========================================================================== */
+
+/* Ajuste sutil na estação para indicar que é clicável */
+.station {
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Fundo Escurecido do Modal com Desfoque Mágico */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 33, 66, 0.4); /* Tom escuro pastel com opacidade */
+    backdrop-filter: blur(8px); /* Efeito de vidro desfocado ao fundo */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Caixa Branca Centralizada do Conteúdo */
+.modal-content {
+    background: var(--branco);
+    width: 100%;
+    max-width: 700px;
+    max-height: 85vh;
+    border-radius: 35px;
+    padding: 35px;
+    box-shadow: 0 30px 70px rgba(179, 157, 219, 0.3);
+    position: relative;
+    overflow-y: auto; /* Adiciona barra de rolagem se o texto for muito grande */
+    animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+/* Botão de Fechar Superior */
+.close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--lilas-principal);
+    cursor: pointer;
+    transition: 0.2s;
+    line-height: 1;
+}
+
+.close:hover {
+    color: var(--texto);
+    transform: scale(1.1);
+}
+
+/* Cabeçalho de Títulos */
+.modal-header {
+    margin-bottom: 25px;
+}
+
+.modal-badge {
+    background: var(--lilas-claro);
+    color: var(--lilas-principal);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    color: var(--texto);
+}
+
+/* Customização dos elementos internos do Modal */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #000;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.article-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--texto);
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+/* Caixa Especial Criativa para Links */
+.links-box {
+    background: var(--lilas-claro);
+    border: 2px dashed var(--lilas-principal);
+    border-radius: 22px;
+    padding: 20px;
+}
+
+.links-box h4 {
+    color: var(--texto);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.links-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.links-box ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: 600;
+    background: var(--branco);
+    padding: 12px 18px;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(179, 157, 219, 0.05);
+}
+
+.links-box ul li a:hover {
+    background: var(--amarelo-pastel);
+    transform: translateX(5px);
+}
+
+/* Animações de Entrada */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* ==========================================================================
    5. SEÃ‡ÃƒO DE EQUIPE (TEAM)
    ========================================================================== */
 .team-section {
