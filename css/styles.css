@@ -411,15 +411,15 @@ nav a:hover {
 }
 
 .icon {
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     margin: auto;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--lilas-principal), var(--azul-pastel));
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 20rem;
     color: white;
     margin-bottom: 20px;
 }
