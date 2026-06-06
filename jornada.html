@@ -47,89 +47,76 @@ Clique em uma estação para descobrir mais.
 
 </section>
 
-<section class="journey-map">
-
-    <div class="road"></div>
-
-    <div class="station left" data-target="modal1">
-        <div class="icon">🏠</div>
-        <h3>1. O que é?</h3>
-    </div>
-
-    <div class="station right" data-target="modal2">
-        <div class="icon">❌</div>
-        <h3>2. O que não é?</h3>
-    </div>
-
-    <div class="station left" data-target="modal3">
-        <div class="icon">⏳</div>
-        <h3>3. Histórico</h3>
-    </div>
-
-    <div class="station right" data-target="modal4">
-        <div class="icon">🧰</div>
-        <h3>4. Ferramentas</h3>
-    </div>
-
-    <div class="station left" data-target="modal5">
-        <div class="icon">🌳</div>
-        <h3>5. Benefícios</h3>
-    </div>
-
-    <div class="station right" data-target="modal6">
-        <div class="icon">👥</div>
-        <h3>6. Papéis</h3>
-    </div>
-
-    <div class="station left" data-target="modal7">
-        <div class="icon">📊</div>
-        <h3>7. Avaliação</h3>
-    </div>
-
-    <div class="station right" data-target="modal8">
-        <div class="icon">⚖️</div>
-        <h3>8. LDB</h3>
-    </div>
-
-    <div class="station left" data-target="modal9">
-        <div class="icon">📜</div>
-        <h3>9. Decreto</h3>
-    </div>
-
-    <div class="station right" data-target="modal10">
-        <div class="icon">♿</div>
-        <h3>10. LBI</h3>
-    </div>
-
-    <div class="station center" data-target="modal11">
-        <div class="icon">📚</div>
-        <h3>11. Referências</h3>
-    </div>
-
+<!-- Substitua a seção do mapa da jornada por esta -->
+<section class="preview">
+    <div class="journey-header-badge">✨ Aprender juntos, crescer sempre! 💜</div>
+    <h2>Mapa da Tutoria de Pares</h2>
+    <p>Clique em qualquer estação do caminho para abrir materiais de aprofundamento, artigos e vídeos explicativos!</p>
 </section>
 
-<!-- MODAIS -->
+<section class="journey-map">
+    <div class="road"></div>
 
-<div class="modal" id="modal1">
+    <!-- ESTAÇÃO 1 -->
+    <div class="station left" onclick="toggleStation(this)">
+        <div class="badge-indicator">1</div>
+        <div class="icon">💡</div>
+        <h3>Tutoria de Pares: O Que É?</h3>
+        
+        <div class="station-media-content">
+            <div class="video-container">
+                <!-- Substitua o ID 'VIDEO_ID_AQUI' pelo código de incorporação do Youtube desejado -->
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" allowfullscreen></iframe>
+            </div>
+            <div class="article-text">
+                <strong>Conceituação Científica:</strong> A tutoria de pares é uma estratégia pedagógica onde estudantes interagem para alcançar objetivos de aprendizagem mútuos. Funciona potencializando a Zona de Desenvolvimento Proximal (ZDP) de Vygotsky de forma prática e horizontal.
+            </div>
+        </div>
+    </div>
 
-<div class="modal-content">
+    <!-- ESTAÇÃO 2 -->
+    <div class="station right" onclick="toggleStation(this)">
+        <div class="badge-indicator">2</div>
+        <div class="icon">❌</div>
+        <h3>O Que Não É?</h3>
+        
+        <div class="station-media-content">
+            <div class="article-text">
+                <strong>Desmistificando o Processo:</strong> Não se trata de sobrecarregar um aluno com o trabalho do professor, nem de criar uma hierarquia de superioridade intelectual. É uma colaboração mútua onde ambos os lados desenvolvem soft-skills cruciais.
+            </div>
+        </div>
+    </div>
 
-<span class="close">&times;</span>
+    <!-- ESTAÇÃO 3 -->
+    <div class="station left" onclick="toggleStation(this)">
+        <div class="badge-indicator">4</div>
+        <div class="icon">🛠️</div>
+        <h3>Ferramentas e Estratégias</h3>
+        
+        <div class="station-media-content">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" allowfullscreen></iframe>
+            </div>
+            <div class="article-text">
+                <strong>Metodologias Ativas:</strong> Roteiros de feedback construtivo, técnicas de checagem cruzada e cronogramas compartilhados são ótimos exemplos de recursos práticos para o tutor gerenciar o ritmo dos encontros.
+            </div>
+        </div>
+    </div>
 
-<h2>O que é Tutoria de Pares?</h2>
+    <!-- ESTAÇÃO 4 -->
+    <div class="station right" onclick="toggleStation(this)">
+        <div class="badge-indicator">6</div>
+        <div class="icon">👥</div>
+        <h3>Papéis e Competências</h3>
+        
+        <div class="station-media-content">
+            <div class="article-text">
+                <strong>O Tutor (Mentor) & O Tutorado (Aprendiz):</strong> Enquanto o tutor aprimora sua capacidade de síntese, comunicação assertiva e empatia, o tutorado desenvolve autonomia, perde o medo de errar e encontra um ambiente seguro para tirar dúvidas.
+            </div>
+        </div>
+    </div>
+</section>
 
-<p>
-Insira aqui seu conteúdo completo.
-</p>
-
-<iframe
-src=""
-allowfullscreen>
-</iframe>
-
-</div>
-
-</div>
 
 <script src="js/journey.js"></script>
 

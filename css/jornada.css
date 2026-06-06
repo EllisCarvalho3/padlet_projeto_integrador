@@ -123,3 +123,40 @@
     color: #2d2142;
 
 }
+
+.station{
+
+overflow:hidden;
+
+}
+
+.station::before{
+
+content:"";
+
+position:absolute;
+
+width:120px;
+height:120px;
+
+background:
+rgba(157,123,255,.15);
+
+border-radius:50%;
+
+top:-50px;
+right:-50px;
+
+}
+
+.station:hover{
+
+transform:
+translateY(-10px)
+scale(1.05);
+
+box-shadow:
+0 30px 70px rgba(107,70,255,.25);
+
+}
+

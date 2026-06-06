@@ -1,44 +1,23 @@
-@media(max-width:1000px){
+@media(max-width:900px){
 
-    .hero{
+.hero-content{
 
-        flex-direction: column;
-        text-align:center;
+grid-template-columns:1fr;
 
-    }
-
-    .hero h1{
-
-        font-size:3rem;
-
-    }
+text-align:center;
 
 }
 
-@media(max-width:768px){
+.member{
 
-    nav{
+flex-direction:column !important;
 
-        display:none;
+}
 
-    }
+nav{
 
-    #mobile-menu{
+display:none;
 
-        display:block;
-
-    }
-
-    .hero h1{
-
-        font-size:2.5rem;
-
-    }
-
-    .hero-buttons{
-
-        flex-direction:column;
-
-    }
+}
 
 }

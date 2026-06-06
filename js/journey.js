@@ -1,63 +1,48 @@
 const stations =
 document.querySelectorAll(".station");
 
-const modal =
-document.querySelector(".modal");
+const modals =
+document.querySelectorAll(".modal");
 
-const close =
-document.querySelector(".close");
+const closes =
+document.querySelectorAll(".close");
 
-stations.forEach(station=>{
+stations.forEach(station => {
 
-station.addEventListener("click",()=>{
+    station.addEventListener("click", () => {
 
-modal.style.display="block";
+        const target =
+        station.dataset.target;
 
-});
+        document
+        .getElementById(target)
+        .style.display = "flex";
 
-});
-
-close.addEventListener("click",()=>{
-
-modal.style.display="none";
-
-});
-
-window.addEventListener("click",(e)=>{
-
-if(e.target===modal){
-
-modal.style.display="none";
-
-}
+    });
 
 });
 
-const topBtn =
-document.getElementById("topBtn");
+closes.forEach(btn => {
 
-window.addEventListener("scroll",()=>{
+    btn.addEventListener("click", () => {
 
-if(window.scrollY > 300){
+        btn.closest(".modal")
+        .style.display = "none";
 
-topBtn.style.display="block";
-
-}else{
-
-topBtn.style.display="none";
-
-}
+    });
 
 });
 
-topBtn.addEventListener("click",()=>{
+window.addEventListener("click", (e) => {
 
-window.scrollTo({
+    modals.forEach(modal => {
 
-top:0,
+        if(e.target === modal){
 
-behavior:"smooth"
+            modal.style.display = "none";
 
-});
+        }
+
+    });
 
 });
