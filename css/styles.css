@@ -772,6 +772,12 @@ nav a:hover {
     gap: 8px;
 }
 
+/* Garante que as estações em formato de link mantenham o design original intacto */
+.journey-map .station {
+    text-decoration: none;
+    display: block; /* Mantém o comportamento de bloco da div antiga */
+}
+
 /* Responsividade de Tela para Celulares */
 @media (max-width: 850px) {
     .law-row {
