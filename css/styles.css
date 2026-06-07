@@ -1082,7 +1082,6 @@ footer {
     }
 }
 
-
 /* ==========================================================================
    10. RESPONSIVIDADE COMPLETA E COMPLEMENTAR (MOBILE & TABLET)
    ========================================================================== */
@@ -1094,18 +1093,67 @@ footer {
         font-size: 14px;
     }
     
+    /* --- HEADER FIXO COM EFEITO MÁGICO GLASSMOURPHISM --- */
     header {
-        padding: 15px 5%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 12px 5%;
+        flex-direction: column; /* Organiza a Logo no topo e os links logo abaixo */
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.82); /* Vidro ligeiramente mais opaco no mobile para leitura */
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        box-shadow: 0 8px 32px rgba(179, 157, 219, 0.15);
+        z-index: 9999; /* Garante que ficará por cima de qualquer elemento */
     }
 
-    /* --- SEÇÃO HERO --- */
+    .logo {
+        font-size: 1.15rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Ajuste estrutural do Menu de Navegação */
+    nav {
+        display: flex !important; /* Força os links a reaparecerem */
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Caso adicione muitos links, eles quebram linha sem sumir */
+        gap: 15px;
+        width: 100%;
+        padding-bottom: 5px;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 6px 10px;
+        background: rgba(179, 157, 219, 0.12); /* Caixa pastel sutil ao redor de cada link */
+        border-radius: 10px;
+        color: var(--texto);
+        transition: 0.2s ease;
+    }
+
+    nav a:hover, nav a:focus {
+        background: var(--lilas-principal);
+        color: white;
+    }
+
+    #mobile-menu {
+        display: none !important; /* Oculta botões de hambúrguer manuais não estruturados */
+    }
+
+    /* --- SEÇÃO HERO (Ajustada para não iniciar por baixo do Header fixo) --- */
     .hero {
-        padding: 100px 5% 60px 5%;
+        padding: 130px 5% 60px 5%; /* Padding superior aumentado para o Header não cobrir o título */
         min-height: auto;
     }
 
     .hero h1 {
-        font-size: 2.4rem; /* Evita que o título original de 4rem quebre a tela */
+        font-size: 2.2rem;
         line-height: 1.2;
     }
 
@@ -1116,7 +1164,7 @@ footer {
     }
 
     .hero-buttons {
-        flex-direction: column; /* Botões empilhados no celular */
+        flex-direction: column;
         gap: 12px;
         width: 100%;
     }
@@ -1133,7 +1181,7 @@ footer {
     }
 
     .road {
-        left: 25px; /* Move a linha do caminho para a esquerda */
+        left: 25px;
         transform: none;
     }
 
@@ -1165,18 +1213,19 @@ footer {
 
     /* --- SISTEMA DE MODAIS MÁGICOS (FLUTUANTES) --- */
     .modal {
-        padding: 10px; /* Reduz a borda externa para aproveitar espaço */
+        padding: 10px;
+        z-index: 10000; /* Acima do header fixo para dar foco total à leitura */
     }
 
     .modal-content {
         padding: 25px 20px;
-        max-height: 92vh; /* Permite que a caixa use quase toda a altura da tela */
+        max-height: 90vh;
         border-radius: 25px;
     }
 
     .modal-header h2 {
-        font-size: 1.5rem; /* Título do modal menor no celular */
-        padding-right: 25px; /* Não deixa o texto bater no botão fechar */
+        font-size: 1.4rem;
+        padding-right: 25px;
     }
 
     .close {
@@ -1188,7 +1237,7 @@ footer {
     .article-text {
         font-size: 0.95rem;
         line-height: 1.6;
-        text-align: left; /* Melhora a leitura em telas estreitas */
+        text-align: left;
     }
 
     .links-box {
@@ -1212,14 +1261,14 @@ footer {
     }
 
     .member-photo {
-        width: 200px; /* Diminui a foto redonda no celular */
+        width: 200px;
         height: 200px;
     }
 
     /* --- SEÇÃO DE CONTATO --- */
     .contact-section {
         padding: 60px 5%;
-        grid-template-columns: 1fr; /* Força uma única coluna */
+        grid-template-columns: 1fr;
         gap: 35px;
     }
 
@@ -1240,7 +1289,7 @@ footer {
 
     /* --- BIBLIOGRAFIA E PÁGINA DE LEIS --- */
     .bibliografia, .laws-page {
-        padding: 80px 5% 40px 5%;
+        padding: 120px 5% 40px 5%; /* Aumentado para compensar a barra fixa */
     }
 
     .laws-page h1 {
@@ -1248,7 +1297,7 @@ footer {
     }
 
     .law-row {
-        flex-direction: column; /* Empilha o número, o texto e o botão de download */
+        flex-direction: column;
         text-align: center;
         padding: 25px 20px;
         gap: 15px;
@@ -1266,15 +1315,23 @@ footer {
 
 /* Ajuste fino para celulares muito pequenos (iPhone SE / telas < 380px) */
 @media (max-width: 380px) {
-    .hero h1 {
-        font-size: 2rem;
+    header {
+        padding: 10px 3%;
     }
-    
+    nav {
+        gap: 8px;
+    }
+    nav a {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
     .modal-content {
         padding: 20px 15px;
     }
-    
     .modal-header h2 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 }
