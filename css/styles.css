@@ -1091,6 +1091,7 @@ footer {
     /* --- AJUSTES GERAIS E TIPOGRAFIA --- */
     body {
         font-size: 14px;
+        padding-top: 40px;
     }
     
     /* --- HEADER FIXO COM EFEITO MÁGICO GLASSMOURPHISM --- */
@@ -1319,11 +1320,11 @@ footer {
         padding: 4px 3%;
     }
     nav {
-        gap: 1px;
+        gap: 4px;
     }
     nav a {
         font-size: 0.70rem;
-        padding: 2px 4px;
+        padding: 2px 12px;
     }
     .hero h1 {
         font-size: 1.5rem;
