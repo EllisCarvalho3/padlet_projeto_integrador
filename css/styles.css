@@ -1082,3 +1082,199 @@ footer {
     }
 }
 
+
+/* ==========================================================================
+   10. RESPONSIVIDADE COMPLETA E COMPLEMENTAR (MOBILE & TABLET)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    
+    /* --- AJUSTES GERAIS E TIPOGRAFIA --- */
+    body {
+        font-size: 14px;
+    }
+    
+    header {
+        padding: 15px 5%;
+    }
+
+    /* --- SEÇÃO HERO --- */
+    .hero {
+        padding: 100px 5% 60px 5%;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem; /* Evita que o título original de 4rem quebre a tela */
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-top: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Botões empilhados no celular */
+        gap: 12px;
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        text-align: center;
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    /* --- MAPA DA JORNADA (ESTAÇÕES) --- */
+    .journey-map {
+        padding: 60px 0 100px 0;
+    }
+
+    .road {
+        left: 25px; /* Move a linha do caminho para a esquerda */
+        transform: none;
+    }
+
+    .station {
+        width: calc(100% - 50px) !important;
+        margin-left: 50px !important;
+        margin-right: 0 !important;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    .badge-indicator {
+        top: 15px;
+        left: 15px;
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .station h3 {
+        font-size: 1.2rem;
+    }
+
+    /* --- SISTEMA DE MODAIS MÁGICOS (FLUTUANTES) --- */
+    .modal {
+        padding: 10px; /* Reduz a borda externa para aproveitar espaço */
+    }
+
+    .modal-content {
+        padding: 25px 20px;
+        max-height: 92vh; /* Permite que a caixa use quase toda a altura da tela */
+        border-radius: 25px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.5rem; /* Título do modal menor no celular */
+        padding-right: 25px; /* Não deixa o texto bater no botão fechar */
+    }
+
+    .close {
+        top: 15px;
+        right: 20px;
+        font-size: 1.8rem;
+    }
+
+    .article-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: left; /* Melhora a leitura em telas estreitas */
+    }
+
+    .links-box {
+        padding: 15px;
+        border-radius: 18px;
+    }
+
+    .links-box ul li a {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+
+    /* --- SEÇÃO DE EQUIPE (MEMBER) --- */
+    .team-section {
+        padding: 60px 5%;
+    }
+
+    .member {
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .member-photo {
+        width: 200px; /* Diminui a foto redonda no celular */
+        height: 200px;
+    }
+
+    /* --- SEÇÃO DE CONTATO --- */
+    .contact-section {
+        padding: 60px 5%;
+        grid-template-columns: 1fr; /* Força uma única coluna */
+        gap: 35px;
+    }
+
+    .contact-info h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .contact-info p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .magic-form {
+        padding: 25px 20px;
+        border-radius: 25px;
+    }
+
+    /* --- BIBLIOGRAFIA E PÁGINA DE LEIS --- */
+    .bibliografia, .laws-page {
+        padding: 80px 5% 40px 5%;
+    }
+
+    .laws-page h1 {
+        font-size: 2.2rem;
+    }
+
+    .law-row {
+        flex-direction: column; /* Empilha o número, o texto e o botão de download */
+        text-align: center;
+        padding: 25px 20px;
+        gap: 15px;
+    }
+
+    .law-number {
+        margin: 0 auto;
+    }
+
+    .btn-law {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Ajuste fino para celulares muito pequenos (iPhone SE / telas < 380px) */
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .modal-content {
+        padding: 20px 15px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.3rem;
+    }
+}
