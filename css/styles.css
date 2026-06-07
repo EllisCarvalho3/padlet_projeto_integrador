@@ -991,83 +991,166 @@ footer {
     font-weight: 500;
 }
 
-/* SeÃ§Ã£o Contato Encantadora */
-.contact-section {
-    padding: 120px 8%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+
+
+
+
+
+
+
+/* ==========================================================================
+   11. SEÇÃO DE CONTATO ESTILO GLOW PASTEL (TEMA CLARO - image_4a2b8d.png)
+   ========================================================================== */
+
+.contact-page-container {
+    padding: 140px 8% 100px 8%;
+    background: radial-gradient(circle at top, #fbf7ff, #ffffff); /* Fundo claro sutil */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    background: var(--branco);
+    justify-content: center;
 }
 
-.contact-info h2 {
-    font-size: 3rem;
-    color: var(--lilas-principal);
-    margin-bottom: 20px;
+/* Cabeçalho Centralizado com Brilho Lilás Sutil */
+.neon-contact-header {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.contact-info p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 30px;
-}
-
-.magic-form {
-    background: var(--lilas-claro);
-    padding: 40px;
-    border-radius: 30px;
-    box-shadow: 0 20px 50px rgba(179, 157, 219, 0.2);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.form-group label {
-    font-weight: 600;
-    color: var(--texto);
-    font-size: 0.95rem;
-}
-
-.form-group input, .form-group textarea {
-    padding: 15px;
-    border: 2px solid transparent;
-    border-radius: 15px;
-    background: var(--branco);
-    font-size: 1rem;
-    color: var(--texto);
-    transition: 0.3s;
-}
-
-.form-group input:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: var(--lilas-principal);
-    box-shadow: 0 0 10px rgba(179, 157, 219, 0.3);
-}
-
-.btn-magic {
-    background: linear-gradient(135deg, var(--lilas-principal), var(--azul-pastel));
-    color: white;
-    border: none;
-    padding: 16px;
-    border-radius: 15px;
+.neon-title {
+    font-size: 3.5rem;
     font-weight: 700;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 10px 20px rgba(179, 157, 219, 0.3);
+    color: var(--lilas-principal);
+    text-shadow: 0 4px 15px rgba(179, 157, 219, 0.4);
+    margin-bottom: 15px;
 }
 
-.btn-magic:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px rgba(179, 157, 219, 0.4);
+.neon-subtitle {
+    font-size: 1.2rem;
+    color: var(--texto);
+    font-weight: 400;
+    opacity: 0.9;
 }
+
+/* Grid Organizada para os 5 Espaços dos Integrantes */
+.team-contacts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza a segunda linha com 2 cards */
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Card Individual de cada Integrante (Tema Claro) */
+.member-contact-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--lilas-claro);
+    border-radius: 25px;
+    padding: 35px 20px;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(179, 157, 219, 0.1);
+}
+
+.member-contact-card:hover {
+    transform: translateY(-8px);
+    background: var(--branco);
+    border-color: var(--lilas-principal);
+    box-shadow: 0 20px 40px rgba(179, 157, 219, 0.25);
+}
+
+/* Círculo do Avatar */
+.member-avatar-placeholder {
+    font-size: 2.2rem;
+    background: var(--lilas-claro);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+    color: var(--lilas-principal);
+    box-shadow: 0 4px 10px rgba(179, 157, 219, 0.15);
+}
+
+.member-contact-card h3 {
+    color: var(--texto);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.member-contact-card p {
+    color: var(--texto);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+/* Área dos Botões em Círculo com Brilho Traseiro (Inspirado na imagem) */
+.social-glow-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.glow-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--lilas-claro); /* Fundo lilás claro pastel */
+    color: var(--texto); /* Ícone escuro para contraste perfeito */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.35rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(179, 157, 219, 0.2);
+}
+
+/* Efeito Glow Adaptado para Fundo Claro */
+.glow-btn:hover {
+    color: var(--branco);
+    background: var(--lilas-principal); /* Acende no roxo/lilás principal */
+    transform: scale(1.12);
+    box-shadow: 0 0 15px var(--lilas-principal), 0 5px 20px rgba(179, 157, 219, 0.4);
+}
+
+/* --- AJUSTES DE RESPONSIVIDADE MOBILE --- */
+@media (max-width: 768px) {
+    .contact-page-container {
+        padding: 140px 5% 60px 5%;
+    }
+    .neon-title {
+        font-size: 2.6rem;
+    }
+    .neon-subtitle {
+        font-size: 1rem;
+    }
+    .team-contacts-grid {
+        grid-template-columns: 1fr; /* Uma única coluna organizada no celular */
+        gap: 20px;
+    }
+    .member-contact-card {
+        padding: 30px 20px;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .member-contact-card {
+        width: calc(33.33% - 20px); /* Garante que caibam exatamente 3 por linha */
+        max-width: 320px;
+    }
+}
+
+
+
 
 /* Responsividade Adaptada */
 @media (max-width: 900px) {
