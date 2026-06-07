@@ -1316,17 +1316,17 @@ footer {
 /* Ajuste fino para celulares muito pequenos (iPhone SE / telas < 380px) */
 @media (max-width: 380px) {
     header {
-        padding: 10px 3%;
+        padding: 4px 3%;
     }
     nav {
-        gap: 8px;
+        gap: 1px;
     }
     nav a {
-        font-size: 0.75rem;
-        padding: 4px 8px;
+        font-size: 0.70rem;
+        padding: 2px 4px;
     }
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     .modal-content {
         padding: 20px 15px;
