@@ -1,7 +1,4 @@
-﻿/* ==========================================================================
-   1. VARIÃVEIS DE CORES (PALETA PASTEL) E CONFIGURAÃ‡Ã•ES GERAIS
-   ========================================================================== */
-:root {
+﻿:root {
     /* Tons PastÃ©is Principais */
     --lilas-principal: #b39ddb;
     --lilas-secundario: #d1c4e9;
@@ -11,8 +8,8 @@
     --azul-pastel: #b3e5fc;
     --verde-pastel: #c8e6c9;
     
-    /* Tipografia e Fundo */
-    --texto: #423a4a; /* Um roxo acinzentado escuro para manter o contraste legÃ­vel */
+   
+    --texto: #423a4a; 
     --branco: #ffffff;
 }
 
@@ -28,14 +25,11 @@ html {
 }
 
 body {
-    background: radial-gradient(circle at top, #fbf7ff, #ffffff); /* Fundo sutil levemente lilÃ¡s */
+    background: radial-gradient(circle at top, #fbf7ff, #ffffff); 
     color: var(--texto);
     overflow-x: hidden;
 }
 
-/* ==========================================================================
-   2. HEADER & NAVEGAÃ‡ÃƒO
-   ========================================================================== */
 header {
     position: fixed;
     top: 0;
@@ -47,7 +41,7 @@ header {
     align-items: center;
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(20px);
-    box-shadow: 0 10px 40px rgba(179, 157, 219, 0.15); /* Sombra suave no tom lilÃ¡s */
+    box-shadow: 0 10px 40px rgba(179, 157, 219, 0.15); 
 }
 
 .logo {
@@ -79,9 +73,9 @@ nav a:hover {
     font-size: 1.5rem;
 }
 
-/* ==========================================================================
-   3. SEÃ‡ÃƒO HERO (INTRODUÃ‡ÃƒO)
-   ========================================================================== */
+
+
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -96,7 +90,7 @@ nav a:hover {
     position: absolute;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(209, 196, 233, 0.4), transparent); /* Glow lilÃ¡s pastel */
+    background: radial-gradient(circle, rgba(209, 196, 233, 0.4), transparent); 
     top: -200px;
     right: -200px;
 }
@@ -197,9 +191,9 @@ nav a:hover {
     animation: floating 6s infinite ease-in-out;
 }
 
-/* ==========================================================================
-   4. SEÇÃO DE PREVIEW / JORNADA (ATUALIZADA COM MAPA ILUSTRADO)
-   ========================================================================== */
+
+
+
 .preview {
     padding: 100px 8%;
     text-align: center;
@@ -220,7 +214,6 @@ nav a:hover {
     opacity: 0.9;
 }
 
-/* Container Grid para alinhar o Menu e o Mapa */
 .map-showcase-container {
     display: grid;
     grid-template-columns: 320px 1fr;
@@ -231,7 +224,8 @@ nav a:hover {
     text-align: left;
 }
 
-/* Estilização do Menu Glossário Lateral */
+
+
 .map-glossary {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(15px);
@@ -268,13 +262,15 @@ nav a:hover {
     transition: 0.2s ease-in-out;
 }
 
-/* Efeito mágico ao passar o mouse nos tópicos */
+
+
 .map-glossary ul li:hover {
     background: var(--lilas-claro);
     transform: translateX(5px);
 }
 
-/* Círculos numéricos com as cores pastéis alternadas */
+
+
 .g-num {
     width: 26px;
     height: 26px;
@@ -288,7 +284,6 @@ nav a:hover {
     font-size: 0.8rem;
 }
 
-/* Altera a cor do número alternadamente para criar ritmo visual */
 .map-glossary ul li:nth-child(even) .g-num {
     background: var(--azul-pastel);
     color: var(--texto);
@@ -311,7 +306,7 @@ nav a:hover {
     font-style: italic;
 }
 
-/* Moldura e Efeitos do Mapa */
+
 .map-image-wrapper {
     position: relative;
     border-radius: 35px;
@@ -331,7 +326,7 @@ nav a:hover {
     object-fit: cover;
 }
 
-/* Etiqueta Flutuante Charmosa */
+
 .map-overlay-badge {
     position: absolute;
     bottom: 20px;
@@ -346,19 +341,21 @@ nav a:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* Responsividade Completa para Mobile */
+
 @media (max-width: 950px) {
     .map-showcase-container {
-        grid-template-columns: 1fr; /* Transforma em uma coluna única em telas pequenas */
+        grid-template-columns: 1fr; 
         gap: 30px;
     }
     
     .map-glossary {
-        order: 2; /* Move o glossário para baixo da imagem no celular */
+        order: 2; 
     }
 }
 
-/* Map / Caminho Principal */
+
+
+
 .journey-map {
     width: 100%;
     max-width: 1400px;
@@ -375,7 +372,7 @@ nav a:hover {
     height: 100%;
     transform: translateX(-50%);
     border-radius: 999px;
-    background: linear-gradient(#fff59d, #b39ddb, #b3e5fc); /* DegradÃª Amarelo -> LilÃ¡s -> Azul (Tons pastÃ©is) */
+    background: linear-gradient(#fff59d, #b39ddb, #b3e5fc); 
 }
 
 .station {
@@ -429,7 +426,7 @@ nav a:hover {
     color: var(--texto);
 }
 
-/* Detalhes Visuais das EstaÃ§Ãµes (Bolas de fundo decorativas) */
+
 .station::before {
     content: "";
     position: absolute;
@@ -454,27 +451,25 @@ nav a:hover {
     z-index: -1;
 }
 
-/* ==========================================================================
-   9. EXTENSÃO MÁGICA: SISTEMA DE MODAIS FLUTUANTES PASTÉIS
-   ========================================================================== */
 
-/* Ajuste sutil na estação para indicar que é clicável */
+
+
 .station {
     cursor: pointer;
     position: relative;
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Fundo Escurecido do Modal com Desfoque Mágico */
+
 .modal {
-    display: none; /* Escondido por padrão */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(45, 33, 66, 0.4); /* Tom escuro pastel com opacidade */
-    backdrop-filter: blur(8px); /* Efeito de vidro desfocado ao fundo */
+    background-color: rgba(45, 33, 66, 0.4); 
+    backdrop-filter: blur(8px); 
     z-index: 1000;
     justify-content: center;
     align-items: center;
@@ -482,7 +477,9 @@ nav a:hover {
     animation: fadeIn 0.3s ease;
 }
 
-/* Caixa Branca Centralizada do Conteúdo */
+
+
+
 .modal-content {
     background: var(--branco);
     width: 100%;
@@ -492,11 +489,11 @@ nav a:hover {
     padding: 35px;
     box-shadow: 0 30px 70px rgba(179, 157, 219, 0.3);
     position: relative;
-    overflow-y: auto; /* Adiciona barra de rolagem se o texto for muito grande */
+    overflow-y: auto; 
     animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
 }
 
-/* Botão de Fechar Superior */
+
 .close {
     position: absolute;
     top: 25px;
@@ -514,7 +511,7 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* Cabeçalho de Títulos */
+
 .modal-header {
     margin-bottom: 25px;
 }
@@ -535,7 +532,7 @@ nav a:hover {
     color: var(--texto);
 }
 
-/* Customização dos elementos internos do Modal */
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -564,7 +561,6 @@ nav a:hover {
     text-align: justify;
 }
 
-/* Caixa Especial Criativa para Links */
 .links-box {
     background: var(--lilas-claro);
     border: 2px dashed var(--lilas-principal);
@@ -604,7 +600,6 @@ nav a:hover {
     transform: translateX(5px);
 }
 
-/* Animações de Entrada */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -615,9 +610,9 @@ nav a:hover {
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* ==========================================================================
-   5. SEÃ‡ÃƒO DE EQUIPE (TEAM)
-   ========================================================================== */
+
+
+
 .team-section {
     padding: 160px 8%;
 }
@@ -638,7 +633,7 @@ nav a:hover {
     height: 320px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 0 60px rgba(179, 157, 219, 0.4); /* Sombra em harmonia com o lilÃ¡s */
+    box-shadow: 0 0 60px rgba(179, 157, 219, 0.4); 
 }
 
 .member-photo img {
@@ -646,9 +641,10 @@ nav a:hover {
     height: 100%;
     object-fit: cover;
 }
-/* ==========================================================================
-   6. BIBLIOGRAFIA & LEIS (ESTÉTICA INTEGRADA E UNIFICADA)
-   ========================================================================== */
+
+
+
+
 .bibliografia, .laws-page {
     padding: 120px 8% 80px 8%;
     text-align: center;
@@ -668,7 +664,6 @@ nav a:hover {
     margin-bottom: 50px;
 }
 
-/* Container de Alinhamento das Leis */
 .laws-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -677,7 +672,6 @@ nav a:hover {
     gap: 24px;
 }
 
-/* Estrutura das Linhas (Baseada na Referência Bibliográfica) */
 .law-row {
     padding: 25px 35px;
     border-radius: 25px;
@@ -695,7 +689,6 @@ nav a:hover {
     box-shadow: 0 15px 45px rgba(179, 157, 219, 0.2);
 }
 
-/* Círculos Numéricos Identificadores */
 .law-number {
     width: 44px;
     height: 44px;
@@ -710,7 +703,6 @@ nav a:hover {
     flex-shrink: 0;
 }
 
-/* Blocos de Texto Internos */
 .law-info {
     flex: 1;
 }
@@ -728,7 +720,6 @@ nav a:hover {
     opacity: 0.9;
 }
 
-/* Customização dos Fundos Pastéis Baseados na Imagem f16469.png */
 .ldb-row {
     background-color: var(--verde-pastel);
     border-color: rgba(200, 230, 201, 0.5);
@@ -744,7 +735,6 @@ nav a:hover {
     border-color: rgba(255, 245, 157, 0.5);
 }
 
-/* Botões Customizados Herdados da Bibliografia */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -772,13 +762,11 @@ nav a:hover {
     gap: 8px;
 }
 
-/* Garante que as estações em formato de link mantenham o design original intacto */
 .journey-map .station {
     text-decoration: none;
-    display: block; /* Mantém o comportamento de bloco da div antiga */
+    display: block; 
 }
 
-/* Responsividade de Tela para Celulares */
 @media (max-width: 850px) {
     .law-row {
         flex-direction: column;
@@ -797,18 +785,15 @@ nav a:hover {
     }
 }
 
-/* ==========================================================================
-   7. FOOTER
-   ========================================================================== */
+
+
 footer {
     text-align: center;
     padding: 50px;
     background: var(--lilas-claro);
 }
 
-/* ==========================================================================
-   8. ANIMAÃ‡Ã•ES & RESPONSIVIDADE
-   ========================================================================== */
+
 @keyframes floating {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
@@ -830,7 +815,7 @@ footer {
     }
     
     .road {
-        left: 8%; /* Ajuste comum de acessibilidade para o caminho em telas mobile */
+        left: 8%;
     }
     
     .station {
@@ -841,11 +826,8 @@ footer {
 }
 
 
-/* ==========================================================================
-   9. EXTENSÃƒO MÃGICA: JORNADA EXPANSÃVEL, REFERÃŠNCIAS & CONTATO
-   ========================================================================== */
 
-/* Layout UniÃ£o Mapa LÃºdico (Inspirado nas imagens f3945b.jpg e f39456.jpg) */
+
 .journey-header-badge {
     background: var(--amarelo-pastel);
     color: var(--texto);
@@ -860,7 +842,6 @@ footer {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* Containers de MÃ­dia Profunda (EspaÃ§os para VÃ­deos e Artigos) */
 .station-media-content {
     max-height: 0;
     overflow: hidden;
@@ -868,9 +849,8 @@ footer {
     padding: 0 5px;
 }
 
-/* Quando a estaÃ§Ã£o estiver ativa/aberta */
 .station.active .station-media-content {
-    max-height: 2000px; /* Permite expansÃ£o fluida */
+    max-height: 2000px; 
     transition: max-height 0.8s ease-in-out;
     margin-top: 20px;
     padding-top: 20px;
@@ -879,7 +859,7 @@ footer {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* ProporÃ§Ã£o 16:9 */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     border-radius: 15px;
@@ -925,7 +905,6 @@ footer {
     font-size: 0.85rem;
 }
 
-/* SeÃ§Ã£o de ReferÃªncias Estilo Biblioteca (Inspirado na imagem_f3943a.jpg) */
 .library-section {
     padding: 100px 8%;
     background: linear-gradient(180deg, #ffffff, var(--lilas-claro));
@@ -997,14 +976,9 @@ footer {
 
 
 
-
-/* ==========================================================================
-   11. SEÇÃO DE CONTATO ESTILO GLOW PASTEL (TEMA CLARO - image_4a2b8d.png)
-   ========================================================================== */
-
 .contact-page-container {
     padding: 140px 8% 100px 8%;
-    background: radial-gradient(circle at top, #fbf7ff, #ffffff); /* Fundo claro sutil */
+    background: radial-gradient(circle at top, #fbf7ff, #ffffff); 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -1012,7 +986,6 @@ footer {
     justify-content: center;
 }
 
-/* Cabeçalho Centralizado com Brilho Lilás Sutil */
 .neon-contact-header {
     text-align: center;
     margin-bottom: 60px;
@@ -1033,17 +1006,15 @@ footer {
     opacity: 0.9;
 }
 
-/* Grid Organizada para os 5 Espaços dos Integrantes */
 .team-contacts-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centraliza a segunda linha com 2 cards */
+    justify-content: center; 
     gap: 30px;
     width: 100%;
     max-width: 1200px;
 }
 
-/* Card Individual de cada Integrante (Tema Claro) */
 .member-contact-card {
     background: rgba(255, 255, 255, 0.8);
     border: 2px solid var(--lilas-claro);
@@ -1062,7 +1033,6 @@ footer {
     box-shadow: 0 20px 40px rgba(179, 157, 219, 0.25);
 }
 
-/* Círculo do Avatar */
 .member-avatar-placeholder {
     font-size: 2.2rem;
     background: var(--lilas-claro);
@@ -1091,7 +1061,6 @@ footer {
     margin-bottom: 25px;
 }
 
-/* Área dos Botões em Círculo com Brilho Traseiro (Inspirado na imagem) */
 .social-glow-buttons {
     display: flex;
     justify-content: center;
@@ -1102,28 +1071,26 @@ footer {
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background: var(--lilas-claro); /* Fundo lilás claro pastel */
-    color: var(--texto); /* Ícone escuro para contraste perfeito */
+    background: var(--lilas-claro); 
+    color: var(--texto); 
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.35rem;
-   text-decoration: none; /* Mantém o padrão do HTML desativado */
-  border-bottom: 2px solid rgba(179, 157, 219, 0.5); /* Cria um sublinhado customizado */
+   text-decoration: none; 
+  border-bottom: 2px solid rgba(179, 157, 219, 0.5); 
   padding-bottom: 4px; 
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 4px 15px rgba(179, 157, 219, 0.2);
 }
 
-/* Efeito Glow Adaptado para Fundo Claro */
 .glow-btn:hover {
     color: var(--branco);
-    background: var(--lilas-principal); /* Acende no roxo/lilás principal */
+    background: var(--lilas-principal);
     transform: scale(1.12);
     box-shadow: 0 0 15px var(--lilas-principal), 0 5px 20px rgba(179, 157, 219, 0.4);
 }
 
-/* --- AJUSTES DE RESPONSIVIDADE MOBILE --- */
 @media (max-width: 768px) {
     .contact-page-container {
         padding: 140px 5% 60px 5%;
@@ -1135,7 +1102,7 @@ footer {
         font-size: 1rem;
     }
     .team-contacts-grid {
-        grid-template-columns: 1fr; /* Uma única coluna organizada no celular */
+        grid-template-columns: 1fr; 
         gap: 20px;
     }
     .member-contact-card {
@@ -1146,7 +1113,7 @@ footer {
 
 @media (min-width: 769px) {
     .member-contact-card {
-        width: calc(33.33% - 20px); /* Garante que caibam exatamente 3 por linha */
+        width: calc(33.33% - 20px); 
         max-width: 320px;
     }
 }
@@ -1154,7 +1121,6 @@ footer {
 
 
 
-/* Responsividade Adaptada */
 @media (max-width: 900px) {
     .contact-section {
         grid-template-columns: 1fr;
@@ -1167,32 +1133,30 @@ footer {
     }
 }
 
-/* ==========================================================================
-   10. RESPONSIVIDADE COMPLETA E COMPLEMENTAR (MOBILE & TABLET)
-   ========================================================================== */
+
+
 
 @media (max-width: 768px) {
     
-    /* --- AJUSTES GERAIS E TIPOGRAFIA --- */
+
     body {
         font-size: 14px;
         padding-top: 40px;
     }
-    
-    /* --- HEADER FIXO COM EFEITO MÁGICO GLASSMOURPHISM --- */
+
     header {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         padding: 12px 5%;
-        flex-direction: column; /* Organiza a Logo no topo e os links logo abaixo */
+        flex-direction: column; 
         gap: 10px;
-        background: rgba(255, 255, 255, 0.82); /* Vidro ligeiramente mais opaco no mobile para leitura */
+        background: rgba(255, 255, 255, 0.82);
         backdrop-filter: blur(25px);
         -webkit-backdrop-filter: blur(25px);
         box-shadow: 0 8px 32px rgba(179, 157, 219, 0.15);
-        z-index: 9999; /* Garante que ficará por cima de qualquer elemento */
+        z-index: 9999; 
     }
 
     .logo {
@@ -1201,13 +1165,12 @@ footer {
         width: 100%;
     }
 
-    /* Ajuste estrutural do Menu de Navegação */
     nav {
-        display: flex !important; /* Força os links a reaparecerem */
+        display: flex !important; 
         flex-direction: row; 
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap; /* Caso adicione muitos links, eles quebram linha sem sumir */
+        flex-wrap: wrap; 
         gap: 15px;
         width: 100%;
         padding-bottom: 5px;
@@ -1217,7 +1180,7 @@ footer {
         font-size: 0.85rem;
         font-weight: 600;
         padding: 6px 10px;
-        background: rgba(179, 157, 219, 0.12); /* Caixa pastel sutil ao redor de cada link */
+        background: rgba(179, 157, 219, 0.12); 
         border-radius: 10px;
         color: var(--texto);
         transition: 0.2s ease;
@@ -1229,12 +1192,11 @@ footer {
     }
 
     #mobile-menu {
-        display: none !important; /* Oculta botões de hambúrguer manuais não estruturados */
+        display: none !important; 
     }
 
-    /* --- SEÇÃO HERO (Ajustada para não iniciar por baixo do Header fixo) --- */
     .hero {
-        padding: 130px 5% 60px 5%; /* Padding superior aumentado para o Header não cobrir o título */
+        padding: 130px 5% 60px 5%; 
         min-height: auto;
     }
 
@@ -1261,7 +1223,6 @@ footer {
         padding: 14px 20px;
     }
 
-    /* --- MAPA DA JORNADA (ESTAÇÕES) --- */
     .journey-map {
         padding: 60px 0 100px 0;
     }
@@ -1297,10 +1258,9 @@ footer {
         font-size: 1.2rem;
     }
 
-    /* --- SISTEMA DE MODAIS MÁGICOS (FLUTUANTES) --- */
     .modal {
         padding: 10px;
-        z-index: 10000; /* Acima do header fixo para dar foco total à leitura */
+        z-index: 10000; 
     }
 
     .modal-content {
@@ -1336,7 +1296,6 @@ footer {
         font-size: 0.9rem;
     }
 
-    /* --- SEÇÃO DE EQUIPE (MEMBER) --- */
     .team-section {
         padding: 60px 5%;
     }
@@ -1351,7 +1310,6 @@ footer {
         height: 200px;
     }
 
-    /* --- SEÇÃO DE CONTATO --- */
     .contact-section {
         padding: 60px 5%;
         grid-template-columns: 1fr;
@@ -1373,9 +1331,8 @@ footer {
         border-radius: 25px;
     }
 
-    /* --- BIBLIOGRAFIA E PÁGINA DE LEIS --- */
     .bibliografia, .laws-page {
-        padding: 120px 5% 40px 5%; /* Aumentado para compensar a barra fixa */
+        padding: 120px 5% 40px 5%; 
     }
 
     .laws-page h1 {
@@ -1399,7 +1356,6 @@ footer {
     }
 }
 
-/* Ajuste fino para celulares muito pequenos (iPhone SE / telas < 380px) */
 @media (max-width: 380px) {
 
      body {
