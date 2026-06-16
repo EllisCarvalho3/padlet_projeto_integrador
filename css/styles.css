@@ -611,7 +611,9 @@ nav a:hover {
 }
 
 
-
+.team-section h1 {
+    color: var(--lilas-principal);
+}
 
 .team-section {
     padding: 160px 8%;
