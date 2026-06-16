@@ -553,6 +553,35 @@ nav a:hover {
     border: 0;
 }
 
+
+
+/* parte para modal com foto */
+
+.image-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    background: var(--lilas-claro); 
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(179, 157, 219, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+    max-height: 500px; 
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+
+
+/* parte para modal com foto */
+
 .article-text {
     font-size: 1.05rem;
     line-height: 1.7;
