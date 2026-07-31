@@ -1423,11 +1423,12 @@ footer {
         font-size: 1.2rem;
     }
      .team-section h1 {
-        padding-top: 40px;
+        padding-top: 50px;
         font-size: 2rem;
     }
+
     .journey-header-badge {
-        padding-top: 8px;
+        padding-top: 12px;
     }
     
     .library-section h2 {
