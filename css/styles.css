@@ -1426,4 +1426,11 @@ footer {
         padding-top: 40px;
         font-size: 2rem;
     }
+    .journey-header-badge {
+        padding-top: 8px;
+    }
+    
+    .library-section h2 {
+        font-size: 1.8rem;
+    }
 }
