@@ -10,7 +10,7 @@
 
 
 <p align="center">
-    <img src="alimentacao/templates/imagens/demonstracao_sistema_.png" alt="Tela inicial do sistema" width="600">
+    <img src="https://github.com/EllisCarvalho3/padlet_projeto_integrador/blob/main/imagens/mosaico_inicio.png" alt="Tela inicial do sistema" width="600">
 </p>
 
 
@@ -402,7 +402,7 @@ O portal foi desenvolvido utilizando tecnologias voltadas para a construção de
 
 
 <p align="center">
-    <img src="padlet_projeto_integrador/imagens/inicio-sistema.png" alt="Tela inicial do sistema" width="600">
+    <img src="https://github.com/EllisCarvalho3/padlet_projeto_integrador/blob/main/imagens/mosaico_sistema_completo.png" alt="Tela inicial do sistema" width="600">
 </p>
 
 
