@@ -1,65 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mapa da Jornada</title>
-
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/jornada.css">
-
- <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa da Jornada</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/jornada.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/acessibilidade.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
-<header id="header">
+  <header id="header">
+    <div class="logo">Tutoria de Pares</div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="jornada.html">Jornada</a>
+      <a href="legislacao.html">Legislação</a>
+      <a href="sobre.html">Equipe</a>
+      <a href="referencias.html">Referências</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
 
-<div class="logo">
-Tutoria de Pares
-</div>
+  <section class="journey-hero"></section>
 
-<nav>
-
-<a href="index.html">Início</a>
-<a href="jornada.html">Jornada</a>
-<a href="legislacao.html">Legislação</a>
-<a href="sobre.html">Equipe</a>
-<a href="referencias.html">Referências</a>
-<a href="contato.html">Contato</a>
-
-</nav>
-
-</header>
-
-<section class="journey-hero">
-
-</section>
-
-<section class="preview"> <br><br><br>
+  <section class="preview">
     <div class="journey-header-badge">Aprender juntos, crescer sempre!</div>
     <h2>Mapa da Tutoria de Pares</h2>
     <p>Clique em qualquer estação do caminho para abrir materiais de aprofundamento, artigos e vídeos explicativos!</p>
-</section>
+  </section>
 
-<section class="journey-map">
+  <section class="journey-map">
     <div class="road"></div>
 
-    <!-- ESTAÇÃO 1  -->
     <a href="#modal-estacao-1" class="station left">
         <div class="badge-indicator">1</div>
         <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
@@ -68,7 +47,6 @@ Tutoria de Pares
         <h3>Tutoria de Pares: o que é?</h3>
     </a>
 
-    <!-- ESTAÇÃO 2 -->
     <a href="#modal-estacao-2" class="station right">
         <div class="badge-indicator">2</div>
         <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-ban" viewBox="0 0 16 16">
@@ -77,7 +55,6 @@ Tutoria de Pares
         <h3>O que não é?</h3>
     </a>
 
-    <!-- ESTAÇÃO 3 -->
     <a href="#modal-estacao-3" class="station left">
         <div class="badge-indicator">3</div>
         <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
@@ -86,7 +63,6 @@ Tutoria de Pares
         <h3>História</h3>
     </a>
 
-    <!-- ESTAÇÃO 4 -->
     <a href="#modal-estacao-4" class="station right">
         <div class="badge-indicator">4</div>
         <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
@@ -96,7 +72,6 @@ Tutoria de Pares
         <h3>Papéis e competências</h3>
     </a>
 
-    <!-- ESTAÇÃO 5 -->
     <a href="#modal-estacao-5" class="station left">
         <div class="badge-indicator">5</div>
         <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
@@ -106,7 +81,6 @@ Tutoria de Pares
         <h3>Avaliação e Resultados</h3>
     </a>
 
-  <!-- ESTAÇÃO 6 -->
     <a href="#modal-estacao-6" class="station right">
         <div class="badge-indicator">6</div>
         <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-search-heart-fill" viewBox="0 0 16 16">
@@ -115,7 +89,6 @@ Tutoria de Pares
         <h3>Benefícios</h3>
     </a>
 
-       <!-- ESTAÇÃO 7 -->
     <a href="#modal-estacao-7" class="station left">
         <div class="badge-indicator">7</div>
         <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
@@ -125,11 +98,7 @@ Tutoria de Pares
 </svg></div>
         <h3>Ferramentas e estratégias do tutor</h3>
     </a>
-   
-    
-</section>
-    
-</section>
+  </section>
 
 
 <div id="modal-estacao-1" class="modal">
@@ -141,25 +110,23 @@ Tutoria de Pares
         </div>
         <div class="modal-body">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/owATo-yIpOY" allowfullscreen></iframe>
-            </div>
+          <iframe src="https://www.youtube.com/watch?v=owATo-yIpOY" title="Vídeo explicativo sobre o que é a Tutoria de Pares" allowfullscreen></iframe>
+        </div>
             <div class="article-text">
                 <strong>Conceituação científica:</strong> Conceitualmente, a tutoria de pares, em geral, pode ser pensada como um sistema de ensino em que os alunos ajudam-se mutuamente no processo de aprendizagem dos conteúdos acadêmicos. Bowman-Perrott acrescentam que, na tutoria entre pares, os alunos auxiliam uns aos outros a aprender o conteúdo por meio da repetição de conceitos-chave. A tutoria de pares pode, ainda, ser definida como uma série de práticas e estratégias que colocam os pares executando o papel de 'professores' em uma relação do tipo face-a-face, para fornecer particularmente a instrução, a prática, a repetição e o esclarecimento dos conceitos (FERNANDES; COSTA, 2015, p. 40).
             </div>
-            <div class="links-box">
-                <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
-  <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
-</svg>Material complementar</h4>
-                <ul>
-                    <li>
-                        <a href="https://repositorio.ifg.edu.br/bitstream/prefix/1202/1/TCC_AmandaSousa.pdf" target="_blank">
-                            <span></span> Ler artigo completo em PDF
-                        </a>
-                    </li>
-                    <li>
-                    </li>
-                </ul>
-            </div>
+        <div class="links-box">
+          <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
+            <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
+          </svg>Material complementar</h4>
+          <ul>
+            <li>
+              <a href="https://repositorio.ifg.edu.br/bitstream/prefix/1202/1/TCC_AmandaSousa.pdf" target="_blank">
+                <span></span> Ler artigo completo em PDF
+              </a>
+            </li>
+          </ul>
+        </div>
         </div>
     </div>
 </div>
@@ -173,8 +140,8 @@ Tutoria de Pares
         </div>
         <div class="modal-body">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/fNM5S9WVlro" allowfullscreen></iframe>
-            </div>
+          <iframe src="https://www.youtube.com/watch?v=fNM5S9WVlro&source_ve_path=MTc4NDI0" title="Vídeo explicativo sobre o que a Tutoria de Pares não é" allowfullscreen></iframe>
+        </div>
             <div class="article-text">
                 <strong>Desmistificando o processo:</strong> Não se trata de sobrecarregar um aluno com as obrigações e responsabilidades do professor, nem de estabelecer uma hierarquia de superioridade intelectual ou rótulos excludentes. É, essencialmente, uma dinâmica de colaboração mútua onde ambos os lados se apoiam e desenvolvem habilidades interpessoais preciosas.
             </div>
@@ -194,19 +161,17 @@ Tutoria de Pares
                 <strong>Há quanto tempo tem sido praticada?</strong> De acordo com Fernandes e Costa (2015 apud ENRIGHT; AXELROD, 1995), a tutoria não é uma prática nova. Um estudo histórico destacou que ela foi empregada por Aristóteles para educar os discípulos; pelos romanos para o ensino da leitura e da escrita; e pelos jesuítas como uma maneira econômica de educar os meninos. Ademais, os autores destacam que, mais recentemente, a busca em conhecer os métodos da tutoria de pares aumentou, com foco voltado para alunos com atraso escolar e deficiência.
             </div>
             <div class="links-box">
-                <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
-  <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
-</svg> Material complementar</h4>
-                <ul>
-                    <li>
-                        <a href="http://educa.fcc.org.br/pdf/rbee/v21n1/1413-6538-rbee-21-01-00039.pdf" target="_blank">
-                            <span>📄</span> Conheça o histórico dessa prática
-                        </a>
-                    </li>
-                    <li>
-                    </li>
-                </ul>
-            </div>
+          <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
+            <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
+          </svg> Material complementar</h4>
+          <ul>
+            <li>
+              <a href="http://educa.fcc.org.br/pdf/rbee/v21n1/1413-6538-rbee-21-01-00039.pdf" target="_blank">
+                <span>📄</span> Conheça o histórico dessa prática
+              </a>
+            </li>
+          </ul>
+        </div>
         </div>
     </div>
 </div>
@@ -238,19 +203,17 @@ Tutoria de Pares
                 <strong>Mensuração formativa e evolução:</strong> Os benefícios são bilaterais. Para o tutor, há um ganho imenso em metacognição (entender como se aprende) e em habilidades sociais. Para o tutorado, há uma melhora no desempenho acadêmico e na integração social. As instituições costumam medir isso através de provas de diagnóstico e questionários de satisfação.
             </div>
             <div class="links-box">
-                <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
-  <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
-</svg>Material complementar</h4>
-                <ul>
-                    <li>
-                        <a href="https://repositorio.ifg.edu.br/bitstream/prefix/1202/1/TCC_AmandaSousa.pdf" target="_blank">
-                            <span>📄</span> Resultados
-                        </a>
-                    </li>
-                    <li>
-                    </li>
-                </ul>
-            </div>
+          <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
+            <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
+          </svg>Material complementar</h4>
+          <ul>
+            <li>
+              <a href="https://repositorio.ifg.edu.br/bitstream/prefix/1202/1/TCC_AmandaSousa.pdf" target="_blank">
+                <span>📄</span> Resultados
+              </a>
+            </li>
+          </ul>
+        </div>
         </div>
     </div>
 </div>
@@ -264,8 +227,8 @@ Tutoria de Pares
         </div>
         <div class="modal-body">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/WbCB2Jt2z2s" allowfullscreen></iframe>
-            </div>
+          <iframe src="https://www.youtube.com/watch?v=WbCB2Jt2z2s&source_ve_path=MTc4NDI0" title="Vídeo explicativo sobre os benefícios da Tutoria de Pares" allowfullscreen></iframe>
+        </div>
             <div class="article-text">
                 <strong>Conheça os benefícios transformadores da Tutoria de Pares:</strong> Além do aprimoramento acadêmico, a tutoria de pares é um catalisador para o desenvolvimento de habilidades socioemocionais, como empatia, comunicação eficaz e trabalho em equipe. Ela promove um ambiente de aprendizagem mais inclusivo e colaborativo, onde os alunos se sentem valorizados e motivados a crescer juntos.
             </div>
@@ -283,25 +246,22 @@ Tutoria de Pares
         <div class="modal-body">
             
             <div class="image-container">
-                <img src="imagens/ferramentas.png" alt="Infográfico explicativo sobre ferramentas do tutor" class="modal-img">
-            </div>
+          <img src="imagens/ferramentas.png" alt="Infográfico explicativo sobre ferramentas do tutor" class="modal-img">
+        </div>
 
-            <div class="article-text">
+        <div class="article-text">
                 <strong>Quais as estratégias utilizadas pelo tutor?</strong> Na tutoria de pares, o tutor utiliza diversas estratégias para que o aprendizado aconteça de forma leve e colaborativa. No dia a dia, ele conta com plataformas de organização como o Google Classroom para gerenciar tarefas e o Google Drive para que ambos editem documentos em tempo real. Para tornar o estudo mais divertido e testar o conhecimento, é comum o uso de ferramentas de gamificação como o Kahoot! e o Quizlet, que transformam a revisão em um jogo de perguntas e respostas. Por fim, o tutor se baseia em roteiros de conversa e perguntas orientadoras que ajudam a guiar o raciocínio do colega, focando sempre na construção conjunta do saber em vez de apenas entregar a resposta pronta.
             </div>
         </div>
     </div>
 </div>
 
-<footer>
+  <footer>
+    <h3>Ellis Carvalho Xavier &copy; 2026.</h3>
+    <p>Todos os direitos reservados.</p>
+  </footer>
 
-        <h3>Ellis Carvalho Xavier &copy; 2026.</h3>
-        <p>
-            Todos os direitos reservados.
-        </p>
-
-
-<script src="js/journey.js"></script>
-
+  <script src="js/journey.js"></script>
+  <script src="js/acessibilidade.js"></script>
 </body>
 </html>

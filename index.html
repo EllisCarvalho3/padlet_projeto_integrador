@@ -1,150 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <title>Jornada interativa - Tutoria de Pares</title>
-
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
-     <link rel="icon" type="image/svg+xml" href="imagens/image.png">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jornada interativa - Tutoria de Pares</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/acessibilidade.css">
+  <link rel="icon" type="image/svg+xml" href="imagens/image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
-    <div class="particles"></div>
+  <div class="accessibility-panel" aria-label="Opções de acessibilidade">
+    <button type="button" id="increase-font" aria-label="Aumentar tamanho do texto">A+</button>
+    <button type="button" id="decrease-font" aria-label="Diminuir tamanho do texto">A-</button>
+    <button type="button" id="reset-font" aria-label="Restaurar tamanho original do texto">A</button>
+    <button type="button" id="toggle-contrast" aria-label="Ativar ou desativar alto contraste">
+      <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+      <span>Contraste</span>
+    </button>
+    <button type="button" id="toggle-motion" aria-label="Reduzir animações da página">
+      <i class="fa-solid fa-person-walking" aria-hidden="true"></i>
+      <span>Reduzir animações</span>
+    </button>
+  </div>
 
-    <header id="header">
+  <div class="particles" aria-hidden="true"></div>
 
-        <div class="logo">
-            Tutoria de Pares
+  <header id="header">
+    <div class="logo" aria-label="Tutoria de Pares">Tutoria de Pares</div>
+    <nav aria-label="Navegação principal">
+      <a href="index.html" aria-current="page">Início</a>
+      <a href="jornada.html">Jornada</a>
+      <a href="legislacao.html">Legislação</a>
+      <a href="sobre.html">Equipe</a>
+      <a href="referencias.html">Referências</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <button id="mobile-menu" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+  </header>
+
+  <main id="conteudo-principal">
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="hero-content">
+        <div class="hero-left">
+          <span class="hero-badge">Aprender juntos, crescer sempre</span>
+          <h1 id="titulo-principal">Jornada criativa: <span>Tutoria de Pares</span></h1>
+          <p>Explore conceitos, estratégias, benefícios e legislações que tornam a aprendizagem colaborativa mais inclusiva.</p>
+          <div class="hero-buttons">
+            <a href="jornada.html" class="btn-primary">
+              <i class="fa-solid fa-play" aria-hidden="true"></i>
+              <span>Iniciar jornada</span>
+            </a>
+            <a href="sobre.html" class="btn-secondary">
+              <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+              <span>Conheça a equipe</span>
+            </a>
+          </div>
         </div>
+        <div class="hero-right">
+          <img src="imagens/home.png" alt="Ilustração relacionada à aprendizagem colaborativa e à Tutoria de Pares">
+        </div>
+      </div>
+    </section>
 
-        <nav>
-
-            <a href="index.html">Início</a>
-
-            <a href="jornada.html">Jornada</a>
-
-            <a href="legislacao.html">Legislação</a>
-
-            <a href="sobre.html">Equipe</a>
-
-            <a href="referencias.html">Referências</a>
-
-            <a href="contato.html">Contato</a>
-
-        </nav>
-
-        <button id="mobile-menu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-    </header>
-
-   <section class="hero">
-
-<div class="hero-content">
-
-<div class="hero-left">
-
-<span class="hero-badge">
-Aprender juntos, crescer sempre
-</span>
-
-<h1>
-Jornada criativa:
-<span>Tutoria de Pares</span>
-</h1>
-
-<p>
-Explore conceitos, estratégias,
-benefícios e legislações que tornam
-a aprendizagem colaborativa mais inclusiva.
-</p>
-
-<div class="hero-buttons">
-
-<a href="jornada.html" class="btn-primary">
-<i class="fa-solid fa-play"></i>
- Iniciar jornada
-</a>
-
-<a href="sobre.html" class="btn-secondary">
-<i class="fa-solid fa-circle-info"></i>
- Conheça a equipe
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-right">
-
-<img src="imagens/home.png">
-
-</div>
-
-</div>
-
-</section>
-
-    <section class="preview">
-    <h2>Mapa da jornada</h2>
-    <p>
-        Uma experiência interativa e encantadora para explorar 
-        cada etapa da Tutoria de Pares.
-    </p>
-
-    <div class="map-showcase-container">
-        
+    <section class="preview" aria-labelledby="titulo-mapa">
+      <h2 id="titulo-mapa">Mapa da jornada</h2>
+      <p>Uma experiência interativa e encantadora para explorar cada etapa da Tutoria de Pares.</p>
+      <div class="map-showcase-container">
         <div class="map-glossary">
-            <h3>Glossário do Mapa</h3>
-            <ul>
-                <li><span class="g-num">1</span> Tutoria de Pares: O que é?</li>
-                <li><span class="g-num">2</span> Tutoria de Pares: O que não é?</li>
-                <li><span class="g-num">3</span> Há quanto tempo é praticada?</li>
-                <li><span class="g-num">4</span> Ferramentas e estratégias</li>
-                <li><span class="g-num">5</span> Papéis e competências</li>
-                <li><span class="g-num">6</span> Avaliação e resultados</li>
-                <li><span class="g-num">...</span> Explore os demais pontos na jornada!</li>
-            </ul>
-            <div class="glossary-footer">
-                Aprender juntos, crescer sempre! 
-            </div>
+          <h3>Glossário do Mapa</h3>
+          <ul>
+            <li><span class="g-num" aria-hidden="true">1</span> Tutoria de Pares: O que é?</li>
+            <li><span class="g-num" aria-hidden="true">2</span> Tutoria de Pares: O que não é?</li>
+            <li><span class="g-num" aria-hidden="true">3</span> Há quanto tempo é praticada?</li>
+            <li><span class="g-num" aria-hidden="true">4</span> Ferramentas e estratégias</li>
+            <li><span class="g-num" aria-hidden="true">5</span> Papéis e competências</li>
+            <li><span class="g-num" aria-hidden="true">6</span> Avaliação e resultados</li>
+            <li><span class="g-num" aria-hidden="true">...</span> Explore os demais pontos na jornada!</li>
+          </ul>
+          <div class="glossary-footer">Aprender juntos, crescer sempre!</div>
         </div>
         <div class="map-image-wrapper">
-            <a href="https://padlet.com/ecarvx/tutoria-de-pares-o-que-e-e-o-que-nao-e-projeto-integrador-ii-6pktjm6gkopsatbq" target="_blank" rel="noopener noreferrer">
-                <img src="imagens/mapa2.0.jpeg" alt="Mapa Ilustrado da Tutoria de Pares" class="interactive-map-img">
-            </a>
-            <div class="map-overlay-badge">Mapa oficial do projeto</div>
+          <a href="https://padlet.com/ecarvx/tutoria-de-pares-o-que-e-e-o-que-nao-e-projeto-integrador-ii-6pktjm6gkopsatbq" target="_blank" rel="noopener noreferrer" aria-label="Abrir o mapa oficial do projeto no Padlet. Abre em nova aba.">
+            <img src="imagens/mapa2.0.jpeg" alt="Mapa ilustrado da Tutoria de Pares com as etapas da jornada">
+          </a>
+          <div class="map-overlay-badge" aria-hidden="true">Mapa oficial do projeto</div>
         </div>
+      </div>
+    </section>
+  </main>
 
-    </div>
-</section>
+  <footer>
+    <h3>Ellis Carvalho Xavier &copy; 2026.</h3>
+    <p>Todos os direitos reservados.</p>
+  </footer>
 
-    <footer>
-
-        <h3>Ellis Carvalho Xavier &copy; 2026.</h3>
-
-        <p>
-            Todos os direitos reservados.
-        </p>
-
-    </footer>
-
-    <script src="js/script.js"></script>
-
+  <script src="js/acessibilidade.js"></script>
+  <script src="js/script.js"></script>
 </body>
-
 </html>

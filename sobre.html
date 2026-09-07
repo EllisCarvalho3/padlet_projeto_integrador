@@ -1,145 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Equipe</title>
-
-<link rel="stylesheet" href="css/styles.css">
- <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipe - Tutoria de Pares</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/acessibilidade.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
-<header>
+  <div class="accessibility-panel" aria-label="Opções de acessibilidade">
+    <button type="button" id="increase-font" aria-label="Aumentar tamanho do texto">A+</button>
+    <button type="button" id="decrease-font" aria-label="Diminuir tamanho do texto">A-</button>
+    <button type="button" id="reset-font" aria-label="Restaurar tamanho original do texto">A</button>
+    <button type="button" id="toggle-contrast" aria-label="Ativar ou desativar alto contraste">
+      <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+      <span>Contraste</span>
+    </button>
+    <button type="button" id="toggle-motion" aria-label="Reduzir animações da página">
+      <i class="fa-solid fa-person-walking" aria-hidden="true"></i>
+      <span>Reduzir animações</span>
+    </button>
+  </div>
 
-<div class="logo">
-Tutoria de Pares
-</div>
+  <header id="header">
+    <div class="logo" aria-label="Tutoria de Pares">Tutoria de Pares</div>
+    <nav aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="jornada.html">Jornada</a>
+      <a href="legislacao.html">Legislação</a>
+      <a href="sobre.html" aria-current="page">Equipe</a>
+      <a href="referencias.html">Referências</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <button id="mobile-menu" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+  </header>
 
-<nav>
+  <main id="conteudo-principal">
+    <section class="team-section" aria-labelledby="titulo-equipe">
+      <h1 id="titulo-equipe">Sobre nós</h1>
+      <p>Olá, seja bem-vindo! Somos a Equipe 4 do curso técnico em Informática para Internet do IF Baiano – Campus Guanambi. Este portal foi desenvolvido no âmbito da disciplina Projeto Integrador II, sob a orientação e docência do professor Woquiton Fernandes. Composta por cinco integrantes, nossa equipe tem como propósito transformar o aprendizado sobre a "Tutoria de Pares" em uma experiência altamente acessível, didática e dinâmica. Nosso objetivo central fundamenta-se em desmistificar conceitos equivocados sobre a temática, democratizando o conhecimento e assegurando que qualquer cidadão seja capaz de compreender e aplicar essa estratégia pedagógica de forma clara e descomplicada.</p>
 
-<a href="index.html">Início</a>
-<a href="jornada.html">Jornada</a>
-<a href="legislacao.html">Legislação</a>
-<a href="sobre.html">Equipe</a>
-<a href="referencias.html">Referências</a>
-<a href="contato.html">Contato</a>
+      <div class="member">
+        <div class="member-photo">
+          <img src="imagens/ellis.png" alt="Foto de Ellis Xavier">
+        </div>
+        <div class="member-text">
+          <h2>Ellis Xavier</h2>
+        </div>
+      </div>
 
-</nav>
+      <div class="member">
+        <div class="member-photo">
+          <img src="imagens/joao.png" alt="Foto de João Gabriel">
+        </div>
+        <div class="member-text">
+          <h2>João Gabriel</h2>
+        </div>
+      </div>
 
-</header>
+      <div class="member">
+        <div class="member-photo">
+          <img src="imagens/anna.png" alt="Foto de Anna Lívia">
+        </div>
+        <div class="member-text">
+          <h2>Anna Lívia</h2>
+        </div>
+      </div>
 
-<section class="team-section">
+      <div class="member">
+        <div class="member-photo">
+          <img src="imagens/gustavo.png" alt="Foto de Gustavo Tolentino">
+        </div>
+        <div class="member-text">
+          <h2>Gustavo Tolentino</h2>
+        </div>
+      </div>
 
-<h1>Sobre nós</h1>
-<p>Olá, seja bem-vindo! Somos a Equipe 4 do curso técnico em Informática para Internet do IF Baiano – Campus Guanambi. Este portal foi desenvolvido no âmbito da disciplina Projeto Integrador II, sob a orientação e docência do professor Woquiton Fernandes. Composta por cinco integrantes, nossa equipe tem como propósito transformar o aprendizado sobre a "Tutoria de Pares" em uma experiência altamente acessível, didática e dinâmica. Nosso objetivo central fundamenta-se em desmistificar conceitos equivocados sobre a temática, democratizando o conhecimento e assegurando que qualquer cidadão seja capaz de compreender e aplicar essa estratégia pedagógica de forma clara e descomplicada.</p> <br> <br> <br> <br> 
+      <div class="member">
+        <div class="member-photo">
+          <img src="imagens/alvaro.jpeg" alt="Foto de Álvaro Guedes">
+        </div>
+        <div class="member-text">
+          <h2>Álvaro Guedes</h2>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<div class="member">
+  <footer>
+    <h3>Ellis Carvalho Xavier &copy; 2026.</h3>
+    <p>Todos os direitos reservados.</p>
+  </footer>
 
-<div class="member-photo">
-
-<img src="imagens/ellis.png">
-
-</div>
-
-<div class="member-text">
-
-<h2>Ellis Xavier</h2>
-
-</div>
-
-</div>
-
-
-<div class="member">
-
-<div class="member-photo">
-
-<img src="imagens/joao.png">
-
-</div>
-
-<div class="member-text">
-
-<h2>João Gabriel</h2>
-
-</div>
-
-</div>
-
-
-<div class="member">
-
-<div class="member-photo">
-
-<img src="imagens/anna.png">
-
-</div>
-
-<div class="member-text">
-
-<h2>Anna Lívia</h2>
-
-</div>
-
-</div>
-
-<div class="member">
-
-<div class="member-photo">
-
-<img src="imagens/gustavo.png">
-
-</div>
-
-<div class="member-text">
-
-<h2>Gustavo Tolentino</h2>
-
-</div>
-
-</div>
-
-<div class="member">
-
-<div class="member-photo">
-
-<img src="imagens/alvaro.jpeg">
-
-</div>
-
-<div class="member-text">
-
-<h2>Álvaro Guedes</h2>
-
-</div>
-
-</div>
-
-
-</section>
-
-<footer>
-
-        <h3>Ellis Carvalho Xavier &copy; 2026.</h3>
-
-        <p>
-            Todos os direitos reservados.
-        </p>
-
-
+  <script src="js/acessibilidade.js"></script>
 </body>
 </html>

@@ -2,14 +2,17 @@
     --lilas-principal: #b39ddb;
     --lilas-secundario: #d1c4e9;
     --lilas-claro: #f3e5f5;
-    
     --amarelo-pastel: #fff59d;
     --azul-pastel: #b3e5fc;
     --verde-pastel: #c8e6c9;
-    
-   
-    --texto: #423a4a; 
+    --texto: #423a4a;
     --branco: #ffffff;
+}
+
+.references-title {
+    font-size: 3rem;
+    color: var(--lilas-principal);
+    margin-bottom: 10px;
 }
 
 * {

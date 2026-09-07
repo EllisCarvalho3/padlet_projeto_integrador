@@ -1,150 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Tutoria de Pares</title>
 
-<title>Contato</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/acessibilidade.css">
 
-<link rel="stylesheet" href="css/styles.css">
- <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
-    <header>
 
-<div class="logo">
-Tutoria de Pares
-</div>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
-<nav>
+  <div class="accessibility-panel" aria-label="Opções de acessibilidade">
+    <button type="button" id="increase-font" aria-label="Aumentar tamanho do texto">A+</button>
+    <button type="button" id="decrease-font" aria-label="Diminuir tamanho do texto">A-</button>
+    <button type="button" id="reset-font" aria-label="Restaurar tamanho original do texto">A</button>
 
-<a href="index.html">Início</a>
-<a href="jornada.html">Jornada</a>
-<a href="legislacao.html">Legislação</a>
-<a href="sobre.html">Equipe</a>
-<a href="referencias.html">Referências</a>
-<a href="contato.html">Contato</a>
+    <button type="button" id="toggle-contrast" aria-label="Ativar ou desativar alto contraste">
+      <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+      <span>Contraste</span>
+    </button>
 
-</nav>
+    <button type="button" id="toggle-motion" aria-label="Reduzir animações da página">
+      <i class="fa-solid fa-person-walking" aria-hidden="true"></i>
+      <span>Reduzir animações</span>
+    </button>
+  </div>
 
-</header><section class="contact-page-container">
-    <div class="neon-contact-header">
-        <h2 class="neon-title">Contato</h2>
-        <p class="neon-subtitle">Conecte-se com a nossa equipe pelas redes sociais:</p>
+  <header id="header">
+    <div class="logo" aria-label="Tutoria de Pares">
+      Tutoria de Pares
     </div>
-    <div class="team-contacts-grid">
-        
-        <!-- INTEGRANTE 1 -->
-        <div class="member-contact-card">
-            <div class="member-avatar-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-</svg></div>
-            <h3>Ellis Xavier</h3>
-            <div class="social-glow-buttons">
-                <a href="https://instagram.com/elliscarv" target="_blank" class="glow-btn" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ecarvx@gmail.com&su=Contato%20pelo%20site&body=Olá,%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer" class="glow-btn" title="E-mail">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                
-            </div>
-        </div>
+
+    <nav aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="jornada.html">Jornada</a>
+      <a href="legislacao.html">Legislação</a>
+      <a href="sobre.html">Equipe</a>
+      <a href="referencias.html">Referências</a>
+      <a href="contato.html" aria-current="page">Contato</a>
+    </nav>
+
+    <button id="mobile-menu" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+  </header>
+
+  <main id="conteudo-principal">
+    <section class="contact-page-container" aria-labelledby="titulo-contato">
+      <div class="neon-contact-header">
+        <h1 class="neon-title" id="titulo-contato">Contato</h1>
+        <p class="neon-subtitle">Conecte-se com a nossa equipe pelas redes sociais:</p>
+      </div>
+
+      <div class="team-contacts-grid" aria-label="Contatos dos integrantes da equipe">
+
+        <article class="member-contact-card">
+          <div class="member-avatar-placeholder" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+            </svg>
+          </div>
+          <h2>Ellis Xavier</h2>
+          <div class="social-glow-buttons">
+            <a href="https://instagram.com/elliscarv" target="_blank" rel="noopener noreferrer" class="glow-btn" aria-label="Instagram de Ellis Xavier. Abre em nova aba.">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ecarvx@gmail.com&su=Contato%20pelo%20site&body=Olá,%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer" class="glow-btn" aria-label="Enviar e-mail para Ellis Xavier. Abre em nova aba.">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span class="sr-only">E-mail</span>
+            </a>
+          </div>
+        </article>
 
         <!-- INTEGRANTE 2 -->
-        <div class="member-contact-card">
-            <div class="member-avatar-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-</svg></div>
-            <h3>João Gabriel</h3>
-            <div class="social-glow-buttons">
-                <a href="https://instagram.com/joaogabriel.tcl4" target="_blank" class="glow-btn" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=joaogabriel676767@gmail.com&su=Contato%20pelo%20site&body=Olá,%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer" class="glow-btn" title="E-mail">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
+        <article class="member-contact-card">
+          <div class="member-avatar-placeholder" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+            </svg>
+          </div>
+          <h2>João Gabriel</h2>
+          <div class="social-glow-buttons">
+            <a href="https://instagram.com/joaogabriel.tcl4" target="_blank" rel="noopener noreferrer" class="glow-btn" aria-label="Instagram de João Gabriel. Abre em nova aba.">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=joaogabriel676767@gmail.com&su=Contato%20pelo%20site&body=Olá,%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer" class="glow-btn" aria-label="Enviar e-mail para João Gabriel. Abre em nova aba.">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span class="sr-only">E-mail</span>
+            </a>
+          </div>
+        </article>
 
         <!-- INTEGRANTE 3 -->
-        <div class="member-contact-card">
-            <div class="member-avatar-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-</svg></div>
-            <h3>Anna Lívia</h3>
-            <div class="social-glow-buttons">
-                <a href="https://instagram.com/liviaa.gms" target="_blank" class="glow-btn" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=magalhaesannalivia07@gmail.com&su=Contato%20pelo%20site&body=Olá,%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer" class="glow-btn" title="E-mail">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
+        <article class="member-contact-card">
+          <div class="member-avatar-placeholder" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+            </svg>
+          </div>
+          <h2>Anna Lívia</h2>
+          <div class="social-glow-buttons">
+            <a href="https://instagram.com/liviaa.gms" target="_blank" rel="noopener noreferrer" class="glow-btn" aria-label="Instagram de Anna Lívia. Abre em nova aba.">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=magalhaesannalivia07@gmail.com&su=Contato%20pelo%20site&body=Olá,%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer" class="glow-btn" aria-label="Enviar e-mail para Anna Lívia. Abre em nova aba.">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span class="sr-only">E-mail</span>
+            </a>
+          </div>
+        </article>
 
+        <!-- INTEGRANTE 4 -->
+        <article class="member-contact-card">
+          <div class="member-avatar-placeholder" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+            </svg>
+          </div>
+          <h2>Gustavo Tolentino</h2>
+          <div class="social-glow-buttons">
+            <a href="https://instagram.com/gustavo_tolentino__" target="_blank" rel="noopener noreferrer" class="glow-btn" aria-label="Instagram de Gustavo Tolentino. Abre em nova aba.">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gustavotolentino1m@gmail.com&su=Contato%20pelo%20site&body=Olá,%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer" class="glow-btn" aria-label="Enviar e-mail para Gustavo Tolentino. Abre em nova aba.">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span class="sr-only">E-mail</span>
+            </a>
+          </div>
+        </article>
 
-         <!-- INTEGRANTE 4 -->
-        <div class="member-contact-card">
-            <div class="member-avatar-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-</svg></div>
-            <h3>Gustavo Tolentino</h3>
-            <div class="social-glow-buttons">
-                <a href="https://instagram.com/gustavo_tolentino__" target="_blank" class="glow-btn" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gustavotolentino1m@gmail.com.com&su=Contato%20pelo%20site&body=Olá,%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer" class="glow-btn" title="E-mail">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
+        <!-- INTEGRANTE 5 -->
+        <article class="member-contact-card">
+          <div class="member-avatar-placeholder" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+            </svg>
+          </div>
+          <h2>Álvaro Guedes</h2>
+          <div class="social-glow-buttons">
+            <a href="https://instagram.com/alv.gds" target="_blank" rel="noopener noreferrer" class="glow-btn" aria-label="Instagram de Álvaro Guedes. Abre em nova aba.">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alvaroguedesmontalvao@gmail.com&su=Contato%20pelo%20site&body=Olá,%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer" class="glow-btn" aria-label="Enviar e-mail para Álvaro Guedes. Abre em nova aba.">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span class="sr-only">E-mail</span>
+            </a>
+          </div>
+        </article>
 
+      </div>
 
-         <!-- INTEGRANTE 5 -->
-        <div class="member-contact-card">
-            <div class="member-avatar-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-</svg></div>
-            <h3>Álvaro Guedes</h3>
-            <div class="social-glow-buttons">
-                <a href="https://instagram.com/alv.gds" target="_blank" class="glow-btn" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alvaroguedesmontalvao@gmail.com.com&su=Contato%20pelo%20site&body=Olá,%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer" class="glow-btn" title="E-mail">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-        
+    </section>
 
-    </div>
-</section>
+  </main>
 
-<footer>
+  <footer>
+    <h3>Ellis Carvalho Xavier &copy; 2026.</h3>
+    <p>Todos os direitos reservados.</p>
+  </footer>
 
-        <h3>Ellis Carvalho Xavier &copy; 2026.</h3>
-
-        <p>
-            Todos os direitos reservados.
-        </p>
-
+ <script src="js/acessibilidade.js"></script>
 
 </body>
+
 </html>
