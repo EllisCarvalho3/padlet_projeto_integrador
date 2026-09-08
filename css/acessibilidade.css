@@ -68,6 +68,46 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
+.accessibility-panel {
+  position: fixed;
+  top: 50%;
+  right: 16px;
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  width: min(190px, calc(100vw - 24px));
+  max-height: calc(100vh - 24px);
+  overflow-y: auto;
+  padding: 10px;
+  transform: translateY(-50%);
+  background: #ffffff;
+  border: 2px solid #333333;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.accessibility-panel button {
+  width: 100%;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 6px 8px;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #222222;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.accessibility-panel button[aria-pressed="true"] {
+  background: #222222;
+  color: #ffffff;
+}
+
 
 html.accessibility-large-text {
   font-size: 112.5%;
@@ -89,7 +129,7 @@ html.accessibility-high-contrast body {
 
 html.accessibility-high-contrast a {
   color: #0000ee !important;
-  text-decoration: underline !important;
+  text-decoration: none !important;
 }
 
 html.accessibility-high-contrast button {
@@ -100,6 +140,17 @@ html.accessibility-high-contrast button {
 
 html.accessibility-high-contrast img {
   filter: contrast(1.15);
+}
+
+html.accessibility-high-contrast .accessibility-panel,
+html.accessibility-high-contrast .accessibility-bar {
+  background: #ffffff !important;
+  border-color: #000000 !important;
+}
+
+html.accessibility-high-contrast :focus-visible {
+  outline-color: #000000;
+  outline-offset: 5px;
 }
 
 
@@ -204,22 +255,46 @@ html.accessibility-reduced-motion *::after {
 
 
 @media (max-width: 700px) {
-  .accessibility-bar {
-    top: auto;
-    bottom: 15px;
-    right: 15px;
-    left: 15px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  .accessibility-panel {
+    top: 50%;
+    right: 8px;
+    left: auto;
+    width: min(160px, calc(100vw - 16px));
+    transform: translateY(-50%);
   }
 
-  .accessibility-bar button {
-    flex: 1 1 auto;
+  .accessibility-bar {
+    top: auto;
+    right: 8px;
+    bottom: 8px;
+    left: auto;
+    flex-direction: column;
+    width: min(160px, calc(100vw - 16px));
+    max-height: calc(100vh - 16px);
+    overflow-y: auto;
   }
 
   .video-container {
     padding-bottom: 56.25%;
+  }
+}
+
+@media print {
+  .accessibility-panel,
+  .accessibility-bar,
+  .skip-link,
+  #mobile-menu {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  a {
+    color: #000000 !important;
+    text-decoration: none !important;
   }
 }
 

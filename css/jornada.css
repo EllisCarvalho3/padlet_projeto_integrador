@@ -1,0 +1,19 @@
+.journey-map .station:focus-visible {
+  position: relative;
+  z-index: 2;
+  outline: 4px solid #ffbf00;
+  outline-offset: 6px;
+}
+
+.modal[aria-hidden="true"] {
+  display: none;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.modal .close {
+  flex: 0 0 auto;
+  color: inherit;
+}

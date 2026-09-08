@@ -1,0 +1,35 @@
+@media (max-width: 768px) {
+  header {
+    padding: 16px 5%;
+  }
+
+  header nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    left: 5%;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px;
+    background: #ffffff;
+    border: 2px solid currentColor;
+    border-radius: 8px;
+  }
+
+  header nav.is-open {
+    display: flex;
+  }
+
+  header nav a {
+    padding: 12px;
+  }
+
+  #mobile-menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}

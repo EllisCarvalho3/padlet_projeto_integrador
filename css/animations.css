@@ -1,0 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content,
+.preview,
+.contact-page-container,
+.team-section,
+.laws-page,
+.library-section {
+  animation: fade-in 0.45s ease both;
+}
+
+html.accessibility-reduced-motion .hero-content,
+html.accessibility-reduced-motion .preview,
+html.accessibility-reduced-motion .contact-page-container,
+html.accessibility-reduced-motion .team-section,
+html.accessibility-reduced-motion .laws-page,
+html.accessibility-reduced-motion .library-section {
+  animation: none;
+}
