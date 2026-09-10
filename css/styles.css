@@ -1444,3 +1444,36 @@ footer {
         font-size: 1.8rem;
     }
 }
+
+@media (max-width: 768px) {
+    .accessibility-panel {
+        top: auto;
+        right: 8px;
+        bottom: 8px;
+        width: min(220px, calc(100vw - 16px));
+        max-height: 45vh;
+        transform: none;
+        padding: 8px;
+    }
+
+    .accessibility-panel button {
+        min-height: 44px;
+        font-size: 0.85rem;
+    }
+
+    .skip-link:focus {
+        top: 8px;
+        left: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    .accessibility-panel {
+        width: min(190px, calc(100vw - 16px));
+    }
+
+    .accessibility-panel button {
+        min-height: 40px;
+        font-size: 0.78rem;
+    }
+}
