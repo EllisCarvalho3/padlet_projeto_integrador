@@ -1445,35 +1445,182 @@ footer {
     }
 }
 
+/* Correções finais de responsividade */
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
 @media (max-width: 768px) {
-    .accessibility-panel {
-        top: auto;
-        right: 8px;
-        bottom: 8px;
-        width: min(220px, calc(100vw - 16px));
-        max-height: 45vh;
-        transform: none;
+    body {
+        padding-top: 0 !important;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 64px;
+        padding: 10px 5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .logo {
+        width: auto;
+        text-align: left;
+        font-size: 1.1rem;
+    }
+
+    #mobile-menu {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        border: 2px solid var(--lilas-principal);
+        border-radius: 8px;
+        background: var(--branco);
+        color: var(--texto);
+        cursor: pointer;
+    }
+
+    header nav,
+    header nav:not(.is-open) {
+        display: none !important;
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 5%;
+        left: 5%;
+        width: auto;
+        padding: 8px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        background: var(--branco);
+        border: 2px solid var(--lilas-principal);
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    header nav.is-open {
+        display: flex !important;
+    }
+
+    header nav a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 44px;
+        padding: 10px;
+        border-radius: 8px;
+        background: transparent;
+        font-size: 0.95rem;
+    }
+
+    header nav a:hover,
+    header nav a:focus-visible {
+        background: var(--lilas-claro);
+        color: var(--texto);
+    }
+
+    .hero {
+        padding: 120px 5% 60px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .station {
+        width: calc(100% - 50px) !important;
+        margin-left: 50px !important;
+        margin-right: 0 !important;
+    }
+
+    .modal {
         padding: 8px;
     }
 
-    .accessibility-panel button {
-        min-height: 44px;
-        font-size: 0.85rem;
+    .modal-content {
+        width: 100%;
+        max-height: 90vh;
+        padding: 24px 18px;
     }
 
-    .skip-link:focus {
-        top: 8px;
-        left: 8px;
+    .member,
+    .law-row,
+    .reference-row {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .member-photo {
+        width: min(220px, 75vw);
+        height: min(220px, 75vw);
+    }
+
+    .team-contacts-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .member-contact-card {
+        width: 100%;
+        max-width: none;
     }
 }
 
 @media (max-width: 380px) {
-    .accessibility-panel {
-        width: min(190px, calc(100vw - 16px));
+    header {
+        padding: 8px 3%;
     }
 
-    .accessibility-panel button {
-        min-height: 40px;
-        font-size: 0.78rem;
+    .logo {
+        font-size: 1rem;
+    }
+
+    body {
+        padding-top: 0 !important;
+    }
+
+    .hero {
+        padding-top: 110px;
+    }
+
+    .station {
+        width: calc(100% - 40px) !important;
+        margin-left: 40px !important;
+        padding: 16px;
+    }
+
+    .modal-content {
+        padding: 20px 14px;
     }
 }
