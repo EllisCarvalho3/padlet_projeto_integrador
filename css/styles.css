@@ -1672,7 +1672,7 @@ iframe {
         background: var(--branco);
         border: 2px solid var(--lilas-principal);
         border-radius: 12px;
-        box-shadow: 0 12px 30px rgba(66, 58, 74, 0.18);
+        box-shadow: 0 12px 30px rgba(89, 67, 111, 0.18);
     }
 
     header nav.is-open {
@@ -1763,5 +1763,36 @@ iframe {
         width: calc(100% - 35px) !important;
         margin-left: 35px !important;
         padding: 16px;
+    }
+}
+
+/* Paleta lilás do menu hamburger */
+#mobile-menu {
+    border: 2px solid var(--lilas-principal) !important;
+    color: var(--lilas-principal) !important;
+    background: var(--branco) !important;
+}
+
+#mobile-menu:hover,
+#mobile-menu:focus-visible {
+    border-color: var(--lilas-principal) !important;
+    background: var(--lilas-claro) !important;
+    color: var(--lilas-principal) !important;
+}
+
+@media (max-width: 900px) {
+    header nav,
+    header nav:not(.is-open) {
+        border: 2px solid var(--lilas-principal) !important;
+    }
+
+    header nav a {
+        color: var(--lilas-principal) !important;
+    }
+
+    header nav a:hover,
+    header nav a:focus-visible {
+        background: var(--lilas-claro) !important;
+        color: var(--lilas-principal) !important;
     }
 }
