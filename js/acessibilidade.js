@@ -104,12 +104,33 @@ document.addEventListener("DOMContentLoaded", () => {
     anunciar(html.classList.contains("accessibility-reduced-motion") ? "Animações reduzidas." : "Animações normais ativadas.");
   });
 
-  const menu = document.getElementById("mobile-menu");
-  const nav = document.querySelector("header nav");
+  const header = document.querySelector("header");
+  const nav = header?.querySelector("nav");
+
+  let menu = document.getElementById("mobile-menu");
+
+  if (!menu && header && nav) {
+    menu = document.createElement("button");
+    menu.id = "mobile-menu";
+    menu.type = "button";
+    menu.innerHTML = "☰";
+    menu.setAttribute("aria-label", "Abrir menu de navegação");
+    menu.setAttribute("aria-expanded", "false");
+    menu.setAttribute("aria-controls", "site-navigation");
+    nav.id = nav.id || "site-navigation";
+
+    header.insertBefore(menu, nav);
+  }
+
   menu?.addEventListener("click", () => {
     const aberto = nav?.classList.toggle("is-open") === true;
+
     menu.setAttribute("aria-expanded", String(aberto));
-    menu.setAttribute("aria-label", aberto ? "Fechar menu de navegação" : "Abrir menu de navegação");
+    menu.setAttribute(
+      "aria-label",
+      aberto ? "Fechar menu de navegação" : "Abrir menu de navegação"
+    );
+    menu.innerHTML = aberto ? "×" : "☰";
   });
 
   restaurarPreferencias();

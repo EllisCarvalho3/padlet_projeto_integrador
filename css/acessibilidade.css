@@ -253,91 +253,84 @@ html.accessibility-reduced-motion *::after {
   margin-left: 4px;
 }
 
-
-@media (max-width: 700px) {
-  .accessibility-panel {
+/* Painel de acessibilidade compacto */
+.accessibility-panel {
+    position: fixed;
     top: 50%;
-    right: 8px;
-    left: auto;
-    width: min(160px, calc(100vw - 16px));
+    right: 12px;
+    z-index: 9998;
+    width: 56px;
+    max-height: none;
+    padding: 5px;
+    gap: 5px;
     transform: translateY(-50%);
-  }
-
-  .accessibility-bar {
-    top: auto;
-    right: 8px;
-    bottom: 8px;
-    left: auto;
-    flex-direction: column;
-    width: min(160px, calc(100vw - 16px));
-    max-height: calc(100vh - 16px);
-    overflow-y: auto;
-  }
-
-  .video-container {
-    padding-bottom: 56.25%;
-  }
+    overflow: visible;
 }
 
-@media print {
-  .accessibility-panel,
-  .accessibility-bar,
-  .skip-link,
-  #mobile-menu {
-    display: none !important;
-  }
-
-  body {
-    background: #ffffff !important;
-    color: #000000 !important;
-  }
-
-  a {
-    color: #000000 !important;
-    text-decoration: none !important;
-  }
+.accessibility-panel button {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+    padding: 0;
+    font-size: 0;
+    line-height: 1;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+.accessibility-panel button::after {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+#increase-font::after {
+    content: "A+";
+}
+
+#decrease-font::after {
+    content: "A−";
+}
+
+#reset-font::after {
+    content: "A";
+}
+
+#toggle-contrast::after,
+#contrast-toggle::after {
+    content: "◐";
+}
+
+#toggle-motion::after,
+#motion-toggle::after {
+    content: "♿";
 }
 
 @media (max-width: 768px) {
     .accessibility-panel {
-        position: fixed;
         top: auto;
         right: 8px;
-        bottom: 8px;
-        left: auto;
-        width: min(210px, calc(100vw - 16px));
-        max-height: 42vh;
-        padding: 8px;
-        overflow-y: auto;
+        bottom: 12px;
+        width: 56px;
         transform: none;
     }
 
     .accessibility-panel button {
+        width: 44px;
+        height: 44px;
         min-height: 44px;
-        padding: 8px;
-        font-size: 0.85rem;
     }
 }
 
 @media (max-width: 380px) {
     .accessibility-panel {
-        width: min(180px, calc(100vw - 16px));
-        max-height: 38vh;
+        right: 6px;
+        bottom: 8px;
     }
 
     .accessibility-panel button {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
         min-height: 40px;
-        font-size: 0.78rem;
     }
 }
